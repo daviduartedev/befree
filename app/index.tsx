@@ -6,8 +6,8 @@ import {
   Text,
   View,
 } from "react-native";
-import { styles } from "./index.styles";
 import CardHero from "./src/components/cardHero";
+import { styles } from "./src/screens/Welcome/index.styles";
 
 export default function Index() {
   const disabled = true;
@@ -54,7 +54,8 @@ export default function Index() {
         </View>
 
         <View style={styles.sectionSpacing}>
-          <Pressable
+          <Pressable 
+            
             style={({ pressed }) => [
               styles.button,
               pressed && styles.buttonPressed,

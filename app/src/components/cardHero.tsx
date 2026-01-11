@@ -1,94 +1,63 @@
-import { Image, Text, View } from 'react-native';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Text, View } from 'react-native';
+import { styles } from './cardHero.styles';
 
 export default function CardHero() {
   return (
-    <View
-      style={{
-        backgroundColor: '#F6F7F8',
-        borderRadius: 20,
-        padding: 16,
-      }}
-    >
+    <View style={styles.container}>
 
-      <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 16 }}>
-        <View
-          style={{
-            width: 40,
-            height: 40,
-            borderRadius: 20,
-            backgroundColor: '#E6F4EA',
-            alignItems: 'center',
-            justifyContent: 'center',
-            marginRight: 12,
-          }}
-        >
-          <Image
-            source={require('../../../assets/images/react-logo.png')}
-            style={{ width: 20, height: 20 }}
+      <View style={styles.row}>
+        <View style={[styles.iconWrapperBase, styles.iconGreen]}>
+          <MaterialCommunityIcons
+            name="fingerprint"
+            size={20}
+            color="#1A73E8"
           />
         </View>
 
-        <View style={{ flex: 1 }}>
-          <Text style={{ fontWeight: '600', fontSize: 14 }}>
+        <View style={styles.textContainer}>
+          <Text style={styles.title}>
             Você é o dono dos seus dados
           </Text>
-          <Text style={{ fontSize: 12, color: '#555', marginTop: 2, fontWeight: 500 }}>
+          <Text style={styles.description}>
             Todas as suas informações ficam salvas com segurança no seu dispositivo.
           </Text>
         </View>
       </View>
 
-      <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 16 }}>
-        <View
-          style={{
-            width: 40,
-            height: 40,
-            borderRadius: 20,
-            backgroundColor: '#E8F0FE',
-            alignItems: 'center',
-            justifyContent: 'center',
-            marginRight: 12,
-          }}
-        >
-          <Image
-            source={require('../../../assets/images/react-logo.png')}
-            style={{ width: 20, height: 20 }}
+      <View style={styles.row}>
+        <View style={[styles.iconWrapperBase, styles.iconBlue]}>
+          <MaterialCommunityIcons
+            name="shield-lock"
+            size={20}
+            color="#1A73E8"
           />
         </View>
 
-        <View style={{ flex: 1 }}>
-          <Text style={{ fontWeight: '600', fontSize: 14 }}>
+        <View style={styles.textContainer}>
+          <Text style={styles.title}>
             Privacidade absoluta
           </Text>
-          <Text style={{ fontSize: 12, color: '#555', marginTop: 2, fontWeight: 500 }}>
+          <Text style={styles.description}>
             Nada é compartilhado com terceiros sem sua permissão explícita.
           </Text>
         </View>
       </View>
 
       <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-        <View
-          style={{
-            width: 40,
-            height: 40,
-            borderRadius: 20,
-            backgroundColor: '#FFF3E0',
-            alignItems: 'center',
-            justifyContent: 'center',
-            marginRight: 12,
-          }}
-        >
-          <Image
-            source={require('../../../assets/images/react-logo.png')}
-            style={{ width: 20, height: 20 }}
+        <View style={[styles.iconWrapperBase, styles.iconOrange]}>
+          <MaterialCommunityIcons
+            name="briefcase-check"
+            size={20}
+            color="#1A73E8"
           />
         </View>
 
-        <View style={{ flex: 1 }}>
-          <Text style={{ fontWeight: '600', fontSize: 14 }}>
+        <View style={styles.textContainer}>
+          <Text style={styles.title}>
             Organização, não diagnóstico
           </Text>
-          <Text style={{ fontSize: 12, color: '#555', marginTop: 2, fontWeight: 500 }}>
+          <Text style={styles.description}>
             Este app ajuda a organizar, mas não realiza diagnósticos médicos.
           </Text>
         </View>
