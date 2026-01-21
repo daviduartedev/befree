@@ -13,19 +13,24 @@ import {
 import styles from "../../../styles/login.styles";
 import api from "@/app/services/api";
 
+import { useUser } from "@/app/context/UserContext";
+
 export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const router = useRouter();
+  const { setUser } = useUser();
 
   async function handleLogin() {
     try {
       setLoading(true);
       const response = await api.post('/auth/login', { email, password });
       console.log("Login Success:", response.data);
-      // Here you would save the token: await AsyncStorage.setItem('token', response.data.access_token);
+
+      setUser(response.data.user); // Save user to global context
+
       router.push("/(screens)/Home");
     } catch (error: any) {
       console.error("Login Error:", error);
