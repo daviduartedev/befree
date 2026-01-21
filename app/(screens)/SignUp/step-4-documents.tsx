@@ -2,16 +2,35 @@ import AppHeader from "@/app/components/header";
 import { Ionicons } from "@expo/vector-icons";
 import { Stack, useRouter } from "expo-router";
 import {
-    Image,
-    Pressable,
-    ScrollView,
-    Text,
-    View
+  Image,
+  Pressable,
+  ScrollView,
+  Text,
+  View,
+  Alert
 } from "react-native";
 import styles from "../../../styles/signUp.step4.styles";
+import { useSignUp } from "@/app/context/SignUpContext";
 
 export default function Step4Documents() {
   const router = useRouter();
+  const { data, updateData } = useSignUp();
+
+  // Mock upload implementation
+  const handleUpload = (type: 'doc' | 'photo') => {
+    // In a real app, use expo-image-picker here
+    const mockUrl = type === 'doc'
+      ? 'https://example.com/doc.pdf'
+      : 'https://github.com/shadcn.png';
+
+    if (type === 'doc') {
+      updateData({ documentUrl: mockUrl });
+      Alert.alert("Sucesso", "Documento enviado!");
+    } else {
+      updateData({ photoUrl: mockUrl });
+      Alert.alert("Sucesso", "Foto enviada!");
+    }
+  };
 
   return (
     <>
@@ -45,9 +64,9 @@ export default function Step4Documents() {
             <Text style={styles.cardTitle}>Upload de RG / CNH</Text>
           </View>
 
-          <Pressable style={styles.uploadButton}>
-            <Ionicons name="cloud-upload-outline" size={18} color="#2563EB" />
-            <Text style={styles.uploadText}>Selecionar arquivo</Text>
+          <Pressable style={styles.uploadButton} onPress={() => handleUpload('doc')}>
+            <Ionicons name={data.documentUrl ? "checkmark-circle" : "cloud-upload-outline"} size={18} color="#2563EB" />
+            <Text style={styles.uploadText}>{data.documentUrl ? "Documento Enviado" : "Selecionar arquivo"}</Text>
           </Pressable>
         </View>
 
@@ -60,12 +79,12 @@ export default function Step4Documents() {
           <View style={styles.photoRow}>
             <View style={styles.photoPlaceholder}>
               <Image
-                source={{ uri: "https://via.placeholder.com/80" }}
+                source={{ uri: data.photoUrl || "https://via.placeholder.com/80" }}
                 style={styles.photo}
               />
             </View>
 
-            <Pressable style={styles.photoButton}>
+            <Pressable style={styles.photoButton} onPress={() => handleUpload('photo')}>
               <Ionicons name="camera" size={18} color="#FFFFFF" />
               <Text style={styles.photoButtonText}>Abrir câmera</Text>
             </Pressable>

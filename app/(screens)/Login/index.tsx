@@ -6,13 +6,34 @@ import {
   ScrollView,
   Text,
   TextInput,
-  View
+  View,
+  Alert,
+  ActivityIndicator
 } from "react-native";
 import styles from "../../../styles/login.styles";
+import api from "@/app/services/api";
 
 export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
+
+  async function handleLogin() {
+    try {
+      setLoading(true);
+      const response = await api.post('/auth/login', { email, password });
+      console.log("Login Success:", response.data);
+      // Here you would save the token: await AsyncStorage.setItem('token', response.data.access_token);
+      router.push("/(screens)/Home");
+    } catch (error: any) {
+      console.error("Login Error:", error);
+      Alert.alert("Erro", "Falha ao entrar. Verifique suas credenciais.");
+    } finally {
+      setLoading(false);
+    }
+  }
 
   return (
     <>
@@ -33,6 +54,9 @@ export default function Login() {
               placeholder="Digite seu e-mail ou CPF"
               placeholderTextColor="#9CA3AF"
               style={styles.input}
+              value={email}
+              onChangeText={setEmail}
+              autoCapitalize="none"
             />
           </View>
         </View>
@@ -46,6 +70,8 @@ export default function Login() {
               placeholderTextColor="#9CA3AF"
               secureTextEntry={!showPassword}
               style={styles.input}
+              value={password}
+              onChangeText={setPassword}
             />
             <Pressable onPress={() => setShowPassword(!showPassword)}>
               <Ionicons
@@ -61,8 +87,12 @@ export default function Login() {
           <Text style={styles.forgot}>Esqueci minha senha</Text>
         </Pressable>
 
-        <Pressable style={styles.button}>
-          <Text style={styles.buttonText}>Entrar</Text>
+        <Pressable style={styles.button} onPress={handleLogin} disabled={loading}>
+          {loading ? (
+            <ActivityIndicator color="#FFF" />
+          ) : (
+            <Text style={styles.buttonText}>Entrar</Text>
+          )}
         </Pressable>
         <Pressable onPress={() => router.push("/SignUp/step-1-personal")}>
           <Text style={styles.footer}>

@@ -9,9 +9,11 @@ import {
   View
 } from "react-native";
 import styles from "../../../styles/signUp.personal.styles";
+import { useSignUp } from "@/app/context/SignUpContext";
 
 export default function Step1Personal() {
   const router = useRouter();
+  const { data, updateData } = useSignUp();
 
   return (
     <>
@@ -47,6 +49,8 @@ export default function Step1Personal() {
               placeholder="Ex: João Silva"
               placeholderTextColor="#9CA3AF"
               style={styles.input}
+              value={data.name}
+              onChangeText={(text) => updateData({ name: text })}
             />
           </View>
         </View>
@@ -60,6 +64,8 @@ export default function Step1Personal() {
               placeholderTextColor="#9CA3AF"
               style={styles.input}
               keyboardType="numeric"
+              value={data.cpf}
+              onChangeText={(text) => updateData({ cpf: text })}
             />
           </View>
         </View>
@@ -72,6 +78,8 @@ export default function Step1Personal() {
               placeholder="DD/MM/AAAA"
               placeholderTextColor="#9CA3AF"
               style={styles.input}
+              value={data.birthDate}
+              onChangeText={(text) => updateData({ birthDate: text })}
             />
           </View>
         </View>
@@ -85,6 +93,44 @@ export default function Step1Personal() {
               placeholderTextColor="#9CA3AF"
               style={styles.input}
               keyboardType="phone-pad"
+              value={data.phone}
+              onChangeText={(text) => updateData({ phone: text })}
+            />
+          </View>
+        </View>
+
+        {/* Email and Password fields are missing in UI but required by backend. Adding them here for now or assuming they come later? 
+            Wait, the backend NEEDS email/password. Step 1 doesn't have them in the original code.
+            Checking other steps... Step 5 is finish. 
+            I MUST add Email/Password inputs. I'll add them to Step 1 for simplicity.
+        */}
+        <View style={styles.field}>
+          <Text style={styles.label}>E-mail</Text>
+          <View style={styles.inputContainer}>
+            <Ionicons name="mail-outline" size={18} color="#9CA3AF" />
+            <TextInput
+              placeholder="seu@email.com"
+              placeholderTextColor="#9CA3AF"
+              style={styles.input}
+              keyboardType="email-address"
+              autoCapitalize="none"
+              value={data.email}
+              onChangeText={(text) => updateData({ email: text })}
+            />
+          </View>
+        </View>
+
+        <View style={styles.field}>
+          <Text style={styles.label}>Senha</Text>
+          <View style={styles.inputContainer}>
+            <Ionicons name="lock-closed-outline" size={18} color="#9CA3AF" />
+            <TextInput
+              placeholder="******"
+              placeholderTextColor="#9CA3AF"
+              style={styles.input}
+              secureTextEntry
+              value={data.password}
+              onChangeText={(text) => updateData({ password: text })}
             />
           </View>
         </View>

@@ -1,16 +1,17 @@
 import AppHeader from "@/app/components/header";
 import { Ionicons } from "@expo/vector-icons";
 import { Stack, useRouter } from "expo-router";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
-    Pressable,
-    ScrollView,
-    Text,
-    View
+  Pressable,
+  ScrollView,
+  Text,
+  View
 } from "react-native";
 import styles from "../../../styles/signUp.skills.styles";
+import { useSignUp } from "@/app/context/SignUpContext";
 
-const skills = [
+const skillsList = [
   "Garçom",
   "Garçonete",
   "Barman",
@@ -25,7 +26,12 @@ const skills = [
 
 export default function Step3Skills() {
   const router = useRouter();
-  const [selected, setSelected] = useState<string[]>([]);
+  const { data, updateData } = useSignUp();
+  const [selected, setSelected] = useState<string[]>(data.skills || []);
+
+  useEffect(() => {
+    updateData({ skills: selected });
+  }, [selected]);
 
   function toggleSkill(skill: string) {
     if (selected.includes(skill)) {
@@ -62,7 +68,7 @@ export default function Step3Skills() {
         </Text>
 
         <View style={styles.skillsContainer}>
-          {skills.map((skill) => {
+          {skillsList.map((skill) => {
             const active = selected.includes(skill);
 
             return (
@@ -94,8 +100,9 @@ export default function Step3Skills() {
 
           <Pressable
             style={styles.nextButton}
+            onPress={() => router.push("/(screens)/SignUp/step-4-documents")}
           >
-            <Text onPress={() => router.push("/(screens)/SignUp/step-4-documents")} style={styles.nextText}>Próximo</Text>
+            <Text style={styles.nextText}>Próximo</Text>
           </Pressable>
         </View>
       </ScrollView>

@@ -9,9 +9,11 @@ import {
   View
 } from "react-native";
 import styles from "../../../styles/signUp.step2.styles";
+import { useSignUp } from "@/app/context/SignUpContext";
 
 export default function Step2Address() {
   const router = useRouter();
+  const { data, updateData } = useSignUp();
 
   return (
     <>
@@ -47,6 +49,8 @@ export default function Step2Address() {
               placeholderTextColor="#9CA3AF"
               style={styles.cepInput}
               keyboardType="numeric"
+              value={data.zipCode}
+              onChangeText={(text) => updateData({ zipCode: text })}
             />
             <Pressable style={styles.cepButton}>
               <Ionicons name="search" size={18} color="#FFFFFF" />
@@ -61,6 +65,8 @@ export default function Step2Address() {
               placeholder="Rua, Avenida, Travessa"
               placeholderTextColor="#9CA3AF"
               style={styles.input}
+              value={data.street}
+              onChangeText={(text) => updateData({ street: text })}
             />
           </View>
         </View>
@@ -74,6 +80,8 @@ export default function Step2Address() {
                 placeholderTextColor="#9CA3AF"
                 style={styles.input}
                 keyboardType="numeric"
+                value={data.number}
+                onChangeText={(text) => updateData({ number: text })}
               />
             </View>
           </View>
@@ -85,6 +93,8 @@ export default function Step2Address() {
                 placeholder="Ex: Apto 42"
                 placeholderTextColor="#9CA3AF"
                 style={styles.input}
+                value={data.complement}
+                onChangeText={(text) => updateData({ complement: text })}
               />
             </View>
           </View>
@@ -97,6 +107,8 @@ export default function Step2Address() {
               placeholder="São Paulo"
               placeholderTextColor="#9CA3AF"
               style={styles.input}
+              value={data.city}
+              onChangeText={(text) => updateData({ city: text })}
             />
           </View>
         </View>
