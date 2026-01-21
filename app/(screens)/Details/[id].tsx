@@ -5,11 +5,15 @@ import { Image, Pressable, ScrollView, Text, View } from "react-native";
 import MapView, { Marker } from "react-native-maps";
 import { styles } from "../../../styles/id.styles";
 import { turns } from "../Home/mock";
+import { useState } from "react";
+import ConfirmApplication from "@/app/components/bottomSheet";
+import RequirementsCard from "@/app/components/RequirementsCard";
 
 
 export default function Details() {
     const router = useRouter();
     const { id } = useLocalSearchParams<{ id: string }>();
+    const [showConfirm, setShowConfirm] = useState(false);
 
     const item = turns.find((turn) => turn.id === id);
 
@@ -99,18 +103,25 @@ export default function Details() {
                 <View style={styles.section}>
                     <Text style={styles.sectionTitle}>Descrição das Tarefas</Text>
 
-                    <Pressable style={styles.primaryButton}>
+                    <Pressable
+                        style={styles.primaryButton}
+                        onPress={() => setShowConfirm(true)}
+                    >
                         <Text style={styles.primaryButtonText}>
                             Candidatar-se ao Turno →
                         </Text>
                     </Pressable>
-
                     <View style={styles.taskItem}>
                         <Ionicons name="checkmark-circle" size={16} color="#2563EB" />
                         <Text style={styles.taskText}>
                             Organização e limpeza da praça de atendimento durante o turno.
                         </Text>
                     </View>
+                </View>
+                <View style={styles.section}>
+
+
+                    <RequirementsCard />
                 </View>
 
                 <View style={styles.section}>
@@ -133,6 +144,15 @@ export default function Details() {
                         />
                     </View>
                 </View>
+                {showConfirm && (
+                    <ConfirmApplication
+                        onCancel={() => setShowConfirm(false)}
+                        onConfirm={() => {
+                            setShowConfirm(false);
+                        }}
+                    />
+                )}
+
             </ScrollView>
         </View>
     );
