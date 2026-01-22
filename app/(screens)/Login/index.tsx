@@ -99,7 +99,7 @@ export default function Login() {
             <Text style={styles.buttonText}>Entrar</Text>
           )}
         </Pressable>
-        <Pressable onPress={() => router.push("/SignUp/step-1-personal")}>
+        <Pressable onPress={() => router.push("/(screens)/ChooseRole")}>
           <Text style={styles.footer}>
             Ainda não tem uma conta?{" "}
             <Text style={styles.link}>Cadastre-se</Text>

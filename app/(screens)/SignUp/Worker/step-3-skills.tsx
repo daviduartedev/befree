@@ -8,7 +8,7 @@ import {
   Text,
   View
 } from "react-native";
-import styles from "../../../styles/signUp.skills.styles";
+import styles from "../../../../styles/signUp.skills.styles";
 import { useSignUp } from "@/app/context/SignUpContext";
 
 const skillsList = [
@@ -100,7 +100,7 @@ export default function Step3Skills() {
 
           <Pressable
             style={styles.nextButton}
-            onPress={() => router.push("/(screens)/SignUp/step-4-documents")}
+            onPress={() => router.push("/(screens)/SignUp/Worker/step-4-documents")}
           >
             <Text style={styles.nextText}>Próximo</Text>
           </Pressable>

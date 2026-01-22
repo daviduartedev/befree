@@ -8,7 +8,7 @@ import {
   TextInput,
   View
 } from "react-native";
-import styles from "../../../styles/signUp.step2.styles";
+import styles from "../../../../styles/signUp.step2.styles";
 import { useSignUp } from "@/app/context/SignUpContext";
 
 export default function Step2Address() {
@@ -120,7 +120,7 @@ export default function Step2Address() {
 
           <Pressable
             style={styles.nextButton}
-            onPress={() => router.push("/(screens)/SignUp/step-3-skills")}
+            onPress={() => router.push("/(screens)/SignUp/Worker/step-3-skills")}
           >
             <Text style={styles.nextText}>Próximo</Text>
           </Pressable>

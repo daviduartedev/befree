@@ -5,7 +5,7 @@ export default StyleSheet.create({
     paddingHorizontal: 20,
     paddingTop: 24,
     paddingBottom: 40,
-    backgroundColor: "#FFFFFF",
+    backgroundColor: "#F9FAFB",
     flexGrow: 1,
   },
 

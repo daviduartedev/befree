@@ -9,7 +9,7 @@ import {
   View,
   Alert
 } from "react-native";
-import styles from "../../../styles/signUp.step4.styles";
+import styles from "../../../../styles/signUp.step4.styles";
 import { useSignUp } from "@/app/context/SignUpContext";
 
 export default function Step4Documents() {
@@ -100,12 +100,12 @@ export default function Step4Documents() {
 
         <Pressable
           style={styles.nextButton}
-          onPress={() => router.push("/(screens)/SignUp/step-5-finish")}
+          onPress={() => router.push("/(screens)/SignUp/Worker/step-5-finish")}
         >
           <Text style={styles.nextText}>Continuar para o último passo</Text>
         </Pressable>
 
-        <Pressable onPress={() => router.push("/(screens)/SignUp/step-5-finish")}>
+        <Pressable onPress={() => router.push("/(screens)/SignUp/Worker/step-5-finish")}>
           <Text style={styles.skipText}>Pular e completar depois</Text>
         </Pressable>
       </ScrollView>

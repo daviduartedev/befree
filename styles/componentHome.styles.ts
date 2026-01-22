@@ -9,14 +9,14 @@ export const styles = StyleSheet.create({
         fontFamily: "San-Francisco",
     },
     titleHighlight: {
-        color: "#16A34A",
+        color: "#2563EB",
         fontWeight: "700",
         fontSize: 32,
         fontFamily: "San-Francisco",
     },
     subtitle: {
         color: "#6B7280",
-        fontWeight: "400",
+        fontWeight: "600",
         fontSize: 16,
         lineHeight: 24,
         fontFamily: "San-Francisco",
@@ -25,13 +25,13 @@ export const styles = StyleSheet.create({
         marginTop: 16,
     },
     primaryButton: {
-        backgroundColor: "#22C55E",
+        backgroundColor: "#2563EB",
         paddingVertical: 14,
         borderRadius: 10,
         alignItems: "center",
     },
     primaryButtonPressed: {
-        backgroundColor: "#16A34A",
+        backgroundColor: "#2563EB",
     },
     primaryButtonText: {
         color: "#FFFFFF",

@@ -1,35 +1,32 @@
 import { Pressable, Text, View } from "react-native";
 import { styles } from "../../styles/componentHome.styles";
+import { useRouter } from "expo-router";
 
 type componentHomeProps = {
   disabled?: boolean;
-  onPressPrimary?: () => void;
-  onPressSecondary?: () => void;
 };
 
 export default function ComponentHome({
   disabled = false,
-  onPressPrimary,
-  onPressSecondary,
 }: componentHomeProps) {
+  const router = useRouter();
+
   return (
     <>
       <View>
         <Text style={styles.title}>
-          Sua liberdade,{"\n"}
-          <Text style={styles.titleHighlight}>seu turno</Text>
+          BE{"\n"}
+          <Text style={styles.titleHighlight}>FREE</Text>
         </Text>
 
         <Text style={styles.subtitle}>
-          Conectando profissionais{"\n"}
-          qualificados a empresas que{"\n"}
-          precisam de talento agora.
+          Transforme tempo livre em oportunidades
         </Text>
       </View>
 
       <View style={styles.sectionSpacing}>
         <Pressable
-          onPress={onPressPrimary}
+          onPress={() => router.push("/(screens)/ChooseRole")}
           style={({ pressed }) => [
             styles.primaryButton,
             pressed && styles.primaryButtonPressed,
@@ -44,7 +41,7 @@ export default function ComponentHome({
 
       <View style={styles.sectionSpacing}>
         <Pressable
-          onPress={onPressSecondary}
+          onPress={() => router.push("/(screens)/Login")}
           style={({ pressed }) => [
             styles.secondaryButton,
             pressed && styles.secondaryButtonPressed,

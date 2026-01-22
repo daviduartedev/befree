@@ -2,7 +2,7 @@ import AppHeader from "@/app/components/header";
 import { Ionicons } from "@expo/vector-icons";
 import { Stack, useRouter } from "expo-router";
 import { Pressable, ScrollView, Text, View, Alert, ActivityIndicator } from "react-native";
-import styles from "../../../styles/signUp.step5.styles";
+import styles from "../../../../styles/signUp.step5.styles";
 import { useSignUp } from "@/app/context/SignUpContext";
 import api from "@/app/services/api";
 import { useState } from "react";

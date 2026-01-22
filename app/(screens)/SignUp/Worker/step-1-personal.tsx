@@ -8,7 +8,7 @@ import {
   TextInput,
   View
 } from "react-native";
-import styles from "../../../styles/signUp.personal.styles";
+import styles from "../../../../styles/signUp.personal.styles";
 import { useSignUp } from "@/app/context/SignUpContext";
 
 export default function Step1Personal() {
@@ -137,7 +137,7 @@ export default function Step1Personal() {
 
         <Pressable
           style={styles.button}
-          onPress={() => router.push("/(screens)/SignUp/step-2-address")}
+          onPress={() => router.push("/(screens)/SignUp/Worker/step-2-address")}
         >
           <Text style={styles.buttonText}>Próximo</Text>
           <Ionicons name="arrow-forward" size={18} color="#FFFFFF" />
