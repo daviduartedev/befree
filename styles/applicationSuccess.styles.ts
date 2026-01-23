@@ -53,6 +53,7 @@ export default StyleSheet.create({
         color: "#111827",
         textAlign: "center",
         marginBottom: 12,
+        fontFamily: "Century Gothic",
     },
 
     subtitle: {
@@ -62,6 +63,7 @@ export default StyleSheet.create({
         lineHeight: 20,
         marginBottom: 24,
         paddingHorizontal: 12,
+        fontFamily: "SF Pro Text",
     },
 
     card: {
@@ -85,6 +87,7 @@ export default StyleSheet.create({
         fontWeight: "700",
         color: "#2563EB",
         marginBottom: 4,
+        fontFamily: "SF Pro Text",
     },
 
     cardTitle: {
@@ -92,6 +95,7 @@ export default StyleSheet.create({
         fontWeight: "600",
         color: "#111827",
         marginBottom: 8,
+        fontFamily: "Century Gothic",
     },
 
     cardRow: {
@@ -104,6 +108,7 @@ export default StyleSheet.create({
     cardText: {
         fontSize: 13,
         color: "#6B7280",
+        fontFamily: "SF Pro Text",
     },
 
     cardImage: {
@@ -126,6 +131,7 @@ export default StyleSheet.create({
         color: "#FFFFFF",
         fontSize: 16,
         fontWeight: "600",
+        fontFamily: "SF Pro Text",
     },
 
     secondaryButton: {
@@ -142,5 +148,6 @@ export default StyleSheet.create({
         color: "#2563EB",
         fontSize: 16,
         fontWeight: "600",
+        fontFamily: "SF Pro Text",
     },
 });

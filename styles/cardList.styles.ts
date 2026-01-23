@@ -37,6 +37,7 @@ export const styles = StyleSheet.create({
     fontSize: 12,
     fontWeight: "700",
     color: "#0284C7",
+    fontFamily: "SF Pro Text",
   },
 
   content: {
@@ -59,11 +60,13 @@ export const styles = StyleSheet.create({
     fontWeight: "700",
     color: "#111827",
     marginBottom: 4,
+    fontFamily: "Century Gothic",
   },
 
   subtitle: {
     fontSize: 13,
     color: "#6B7280",
+    fontFamily: "SF Pro Text",
   },
 
   priceContainer: {
@@ -74,11 +77,13 @@ export const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "700",
     color: "#0284C7",
+    fontFamily: "Century Gothic",
   },
 
   total: {
     fontSize: 12,
     color: "#6B7280",
+    fontFamily: "SF Pro Text",
   },
 
   infoRow: {
@@ -88,6 +93,7 @@ export const styles = StyleSheet.create({
   infoText: {
     fontSize: 13,
     color: "#6B7280",
+    fontFamily: "SF Pro Text",
   },
 
   button: {
@@ -106,5 +112,6 @@ export const styles = StyleSheet.create({
     color: "#FFFFFF",
     fontSize: 14,
     fontWeight: "700",
+    fontFamily: "SF Pro Text",
   },
 });

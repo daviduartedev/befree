@@ -37,6 +37,7 @@ export const styles = StyleSheet.create({
         fontSize: 18,
         fontWeight: "600",
         color: "#111827",
+        fontFamily: "Century Gothic",
     },
 
     subtitle: {
@@ -44,6 +45,7 @@ export const styles = StyleSheet.create({
         color: "#6B7280",
         marginTop: 6,
         lineHeight: 18,
+        fontFamily: "SF Pro Text",
     },
 
     checklist: {
@@ -65,12 +67,14 @@ export const styles = StyleSheet.create({
         fontSize: 14,
         color: "#111827",
         fontWeight: "500",
+        fontFamily: "SF Pro Text",
     },
 
     checkDescription: {
         fontSize: 12,
         color: "#6B7280",
         marginTop: 2,
+        fontFamily: "SF Pro Text",
     },
 
     primaryButton: {
@@ -85,6 +89,7 @@ export const styles = StyleSheet.create({
         color: "#FFF",
         fontSize: 15,
         fontWeight: "600",
+        fontFamily: "SF Pro Text",
     },
 
     cancelText: {
@@ -92,6 +97,7 @@ export const styles = StyleSheet.create({
         color: "#6B7280",
         fontSize: 13,
         marginTop: 16,
+        fontFamily: "SF Pro Text",
     },
     primaryButtonDisabled: {
         opacity: 0.5,

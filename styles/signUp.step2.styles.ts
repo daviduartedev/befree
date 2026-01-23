@@ -19,12 +19,14 @@ export default StyleSheet.create({
     fontSize: 12,
     color: "#6B7280",
     fontWeight: "500",
+    fontFamily: "SF Pro Text",
   },
 
   stepLink: {
     fontSize: 12,
     color: "#2563EB",
     fontWeight: "600",
+    fontFamily: "SF Pro Text",
   },
 
   progressBar: {
@@ -45,6 +47,7 @@ export default StyleSheet.create({
     fontSize: 22,
     fontWeight: "700",
     color: "#111827",
+    fontFamily: "Century Gothic",
   },
 
   subtitle: {
@@ -52,6 +55,7 @@ export default StyleSheet.create({
     color: "#6B7280",
     marginTop: 6,
     marginBottom: 24,
+    fontFamily: "SF Pro Text",
   },
 
   field: {
@@ -63,6 +67,7 @@ export default StyleSheet.create({
     fontWeight: "500",
     color: "#111827",
     marginBottom: 6,
+    fontFamily: "SF Pro Text",
   },
 
   inputContainer: {
@@ -78,6 +83,7 @@ export default StyleSheet.create({
   input: {
     fontSize: 14,
     color: "#111827",
+    fontFamily: "SF Pro Text",
   },
 
   cepContainer: {
@@ -132,6 +138,7 @@ export default StyleSheet.create({
     color: "#2563EB",
     fontSize: 14,
     fontWeight: "600",
+    fontFamily: "SF Pro Text",
   },
 
   nextButton: {
@@ -147,5 +154,6 @@ export default StyleSheet.create({
     color: "#FFFFFF",
     fontSize: 14,
     fontWeight: "600",
+    fontFamily: "SF Pro Text",
   },
 });

@@ -38,12 +38,14 @@ export const styles = StyleSheet.create({
     badgeText: {
         color: "#FFF",
         fontSize: 12,
+        fontFamily: "SF Pro Text",
     },
 
     title: {
         color: "#FFF",
         fontSize: 20,
         fontWeight: "600",
+        fontFamily: "Century Gothic",
     },
 
     dateRow: {
@@ -56,6 +58,7 @@ export const styles = StyleSheet.create({
         color: "#E5E7EB",
         marginLeft: 6,
         fontSize: 13,
+        fontFamily: "SF Pro Text",
     },
 
     infoRow: {
@@ -86,6 +89,7 @@ export const styles = StyleSheet.create({
         fontWeight: "600",
         color: "#2563EB",
         marginTop: 4,
+        fontFamily: "Century Gothic",
     },
 
     infoValue: {
@@ -93,6 +97,7 @@ export const styles = StyleSheet.create({
         fontWeight: "600",
         color: "#111827",
         marginTop: 4,
+        fontFamily: "Century Gothic",
     },
 
     infoSub: {
@@ -115,6 +120,7 @@ export const styles = StyleSheet.create({
     sectionTitle: {
         fontSize: 16,
         fontWeight: "600",
+        fontFamily: "Century Gothic",
     },
 
     locationRow: {
@@ -145,6 +151,7 @@ export const styles = StyleSheet.create({
     primaryButtonText: {
         color: "#FFF",
         fontWeight: "600",
+        fontFamily: "SF Pro Text",
     },
 
     taskItem: {
@@ -156,6 +163,7 @@ export const styles = StyleSheet.create({
         marginLeft: 8,
         color: "#374151",
         flex: 1,
+        fontFamily: "SF Pro Text",
     },
 
     companyRow: {
@@ -167,6 +175,7 @@ export const styles = StyleSheet.create({
 
     companyName: {
         fontWeight: "600",
+        fontFamily: "Century Gothic",
     },
 
     companyRating: {

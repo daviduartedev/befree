@@ -10,6 +10,7 @@ export const styles = StyleSheet.create({
         fontWeight: "700",
         color: "#111827",
         marginBottom: 8,
+        fontFamily: "Century Gothic",
     },
 
     card: {
@@ -51,6 +52,7 @@ export const styles = StyleSheet.create({
         fontSize: 14,
         fontWeight: "600",
         color: "#111827",
+        fontFamily: "Century Gothic",
     },
 
     itemDescription: {
@@ -58,5 +60,6 @@ export const styles = StyleSheet.create({
         color: "#6B7280",
         marginTop: 2,
         lineHeight: 16,
+        fontFamily: "SF Pro Text",
     },
 });

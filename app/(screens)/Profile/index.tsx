@@ -1,19 +1,24 @@
 import { Ionicons } from "@expo/vector-icons";
-import { ScrollView, Text, View } from "react-native";
+import { Pressable, ScrollView, Text, View } from "react-native";
 import { styles } from "../../../styles/profile.styles";
 import { useRouter } from "expo-router";
 import AppFooter from "../../components/footer";
 
 import { useUser } from "@/app/context/UserContext";
+import { removeToken } from "@/app/authStorage";
 
 export default function Profile() {
     const router = useRouter();
     const { user } = useUser();
 
+    const logout = async () => {
+        await removeToken();
+        router.replace("/(screens)/Login");
+    };
     if (!user) {
         return (
             <View style={[styles.container, { justifyContent: 'center', alignItems: 'center' }]}>
-                <Text>Carregando perfil...</Text>
+                <Text style={{ fontFamily: 'SF Pro Text' }}>Carregando perfil...</Text>
             </View>
         );
     }
@@ -139,7 +144,7 @@ export default function Profile() {
                 </View>
 
                 <View style={styles.section}>
-                    <Text style={styles.sectionTitle}>Selas de Conquista</Text>
+                    <Text style={styles.sectionTitle}>Selos de Conquista</Text>
 
                     <View style={styles.badgesRow}>
                         <View style={styles.badgeItemActive}>
@@ -164,6 +169,17 @@ export default function Profile() {
                             </Text>
                         </View>
                     </View>
+                </View>
+
+                <View style={{ padding: 20 }}>
+                    <Pressable
+                        onPress={logout}
+                        style={{ backgroundColor: "#2563EB", padding: 12, borderRadius: 8 }}
+                    >
+                        <Text style={{ color: "#fff", alignSelf: "center" }}>Sair</Text>
+                    </Pressable>
+
+
                 </View>
             </ScrollView>
 

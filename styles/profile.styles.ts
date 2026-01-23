@@ -17,6 +17,7 @@ export const styles = StyleSheet.create({
     headerTitle: {
         fontSize: 16,
         fontWeight: "600",
+        fontFamily: "Century Gothic",
     },
 
     profileCard: {
@@ -55,18 +56,21 @@ export const styles = StyleSheet.create({
     name: {
         fontSize: 18,
         fontWeight: "600",
+        fontFamily: "Century Gothic",
     },
 
     subtitle: {
         fontSize: 13,
         color: "#6B7280",
         marginTop: 4,
+        fontFamily: "SF Pro Text",
     },
 
     memberSince: {
         fontSize: 12,
         color: "#9CA3AF",
         marginTop: 2,
+        fontFamily: "SF Pro Text",
     },
 
     ratingCard: {
@@ -81,6 +85,7 @@ export const styles = StyleSheet.create({
     ratingValue: {
         fontSize: 24,
         fontWeight: "600",
+        fontFamily: "Century Gothic",
     },
 
     starsRow: {
@@ -92,6 +97,7 @@ export const styles = StyleSheet.create({
         fontSize: 12,
         color: "#6B7280",
         marginTop: 4,
+        fontFamily: "SF Pro Text",
     },
 
     ratingBars: {
@@ -148,11 +154,13 @@ export const styles = StyleSheet.create({
     sectionTitle: {
         fontSize: 16,
         fontWeight: "600",
+        fontFamily: "Century Gothic",
     },
 
     link: {
         fontSize: 12,
         color: "#2563EB",
+        fontFamily: "SF Pro Text",
     },
 
     earningsLabel: {
@@ -171,6 +179,7 @@ export const styles = StyleSheet.create({
     earningsValue: {
         fontSize: 22,
         fontWeight: "600",
+        fontFamily: "Century Gothic",
     },
 
     earningsGrowth: {
@@ -225,6 +234,7 @@ export const styles = StyleSheet.create({
         color: "#6B7280",
         width: 18,
         textAlign: "center",
+        fontFamily: "SF Pro Text",
     },
 
     skillsRow: {
@@ -248,6 +258,7 @@ export const styles = StyleSheet.create({
         fontSize: 12,
         color: "#2563EB",
         fontWeight: "500",
+        fontFamily: "SF Pro Text",
     },
 
     badgesRow: {
@@ -272,6 +283,7 @@ export const styles = StyleSheet.create({
         color: "#374151",
         textAlign: "center",
         width: 64,
+        fontFamily: "SF Pro Text",
     },
 
     badgeTextDisabled: {

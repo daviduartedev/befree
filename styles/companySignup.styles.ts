@@ -12,12 +12,14 @@ export const styles = StyleSheet.create({
         fontWeight: "600",
         color: "#111827",
         marginBottom: 8,
+        fontFamily: "Century Gothic",
     },
 
     subtitle: {
         fontSize: 14,
         color: "#6B7280",
         marginBottom: 24,
+        fontFamily: "SF Pro Text",
     },
 
     input: {
@@ -29,6 +31,7 @@ export const styles = StyleSheet.create({
         fontSize: 15,
         marginBottom: 16,
         color: "#111827",
+        fontFamily: "SF Pro Text",
     },
 
     primaryButton: {
@@ -48,5 +51,6 @@ export const styles = StyleSheet.create({
         color: "#FFFFFF",
         fontSize: 15,
         fontWeight: "600",
+        fontFamily: "SF Pro Text",
     },
 });

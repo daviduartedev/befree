@@ -19,6 +19,7 @@ export default StyleSheet.create({
     fontWeight: "500",
     color: "#111827",
     marginBottom: 24,
+    fontFamily: "SF Pro Text",
   },
 
   logoWrapper: {
@@ -46,13 +47,15 @@ export default StyleSheet.create({
     fontWeight: "700",
     color: "#111827",
     textAlign: "center",
+    fontFamily: "Century Gothic",
   },
-   htitle: {
+  htitle: {
     fontSize: 40,
     fontWeight: "700",
     color: "#111827",
     textAlign: "center",
-    marginBottom: 120
+    marginBottom: 120,
+    fontFamily: "Century Gothic",
   },
   subtitle: {
     fontSize: 14,
@@ -60,6 +63,7 @@ export default StyleSheet.create({
     textAlign: "center",
     marginTop: 6,
     marginBottom: 32,
+    fontFamily: "SF Pro Text",
   },
 
   field: {
@@ -71,6 +75,7 @@ export default StyleSheet.create({
     fontWeight: "500",
     color: "#111827",
     marginBottom: 6,
+    fontFamily: "SF Pro Text",
   },
 
   inputContainer: {
@@ -88,6 +93,7 @@ export default StyleSheet.create({
     flex: 1,
     fontSize: 14,
     color: "#111827",
+    fontFamily: "SF Pro Text",
   },
 
   forgot: {
@@ -95,6 +101,7 @@ export default StyleSheet.create({
     color: "#2563EB",
     textAlign: "right",
     marginBottom: 24,
+    fontFamily: "SF Pro Text",
   },
 
   button: {
@@ -110,6 +117,7 @@ export default StyleSheet.create({
     color: "#FFFFFF",
     fontSize: 16,
     fontWeight: "600",
+    fontFamily: "SF Pro Text",
   },
 
   or: {
@@ -117,6 +125,7 @@ export default StyleSheet.create({
     fontSize: 11,
     color: "#9CA3AF",
     marginBottom: 16,
+    fontFamily: "SF Pro Text",
   },
 
   socialRow: {
@@ -146,16 +155,19 @@ export default StyleSheet.create({
     fontSize: 14,
     fontWeight: "500",
     color: "#111827",
+    fontFamily: "SF Pro Text",
   },
 
   footer: {
     textAlign: "center",
     fontSize: 13,
     color: "#6B7280",
+    fontFamily: "SF Pro Text",
   },
 
   link: {
     color: "#2563EB",
     fontWeight: "600",
+    fontFamily: "SF Pro Text",
   },
 });

@@ -22,23 +22,24 @@ export const styles = StyleSheet.create({
         fontSize: 14,
         fontWeight: "500",
         color: "#6B7280",
+        fontFamily: "SF Pro Text",
     },
 
     title: {
         fontSize: 22,
         fontWeight: "700",
         color: "#111827",
-        textAlign: "center",
         marginBottom: 8,
         lineHeight: 30,
+        fontFamily: "Century Gothic",
     },
 
     subtitle: {
         fontSize: 14,
         color: "#6B7280",
-        textAlign: "center",
         marginBottom: 24,
         lineHeight: 20,
+        fontFamily: "SF Pro Text",
     },
 
     cards: {
@@ -84,12 +85,14 @@ export const styles = StyleSheet.create({
         fontWeight: "600",
         color: "#111827",
         marginBottom: 4,
+        fontFamily: "Century Gothic",
     },
 
     cardDescription: {
         fontSize: 13,
         color: "#6B7280",
         lineHeight: 18,
+        fontFamily: "SF Pro Text",
     },
 
     checkIcon: {
@@ -114,5 +117,6 @@ export const styles = StyleSheet.create({
         color: "#FFFFFF",
         fontSize: 16,
         fontWeight: "600",
+        fontFamily: "SF Pro Text",
     },
 });

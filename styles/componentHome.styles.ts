@@ -6,20 +6,20 @@ export const styles = StyleSheet.create({
         fontWeight: "700",
         fontSize: 32,
         marginBottom: 12,
-        fontFamily: "San-Francisco",
+        fontFamily: "Century Gothic",
     },
     titleHighlight: {
         color: "#2563EB",
         fontWeight: "700",
         fontSize: 32,
-        fontFamily: "San-Francisco",
+        fontFamily: "Century Gothic",
     },
     subtitle: {
         color: "#6B7280",
         fontWeight: "600",
         fontSize: 16,
         lineHeight: 24,
-        fontFamily: "San-Francisco",
+        fontFamily: "SF Pro Text",
     },
     sectionSpacing: {
         marginTop: 16,
@@ -37,7 +37,7 @@ export const styles = StyleSheet.create({
         color: "#FFFFFF",
         fontSize: 16,
         fontWeight: "700",
-        fontFamily: "San-Francisco",
+        fontFamily: "SF Pro Text",
     },
     secondaryButton: {
         backgroundColor: "#FFFFFF",
@@ -51,7 +51,7 @@ export const styles = StyleSheet.create({
         color: "#374151",
         fontSize: 14,
         fontWeight: "500",
-        fontFamily: "San-Francisco",
+        fontFamily: "SF Pro Text",
         // ❌ removido marginBottom
     },
     secondaryButtonPressed: {

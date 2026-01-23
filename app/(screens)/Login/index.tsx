@@ -34,7 +34,13 @@ export default function Login() {
 
       setUser(response.data.user); // Save user to global context
 
-      router.push("/(screens)/Home");
+      const role = response.data.user.role;
+
+      if (role === "COMPANY") {
+        router.replace("/(screens)/CompanyHome");
+      } else {
+        router.replace("/(screens)/Home");
+      }
     } catch (error: any) {
       console.error("Login Error:", error);
       Alert.alert("Erro", "Falha ao entrar. Verifique suas credenciais.");

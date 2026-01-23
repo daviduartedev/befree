@@ -29,7 +29,7 @@ export default function ChooseRole() {
             }} />
 
             <Text style={styles.title}>
-                Como você deseja usar o{"\n"}befree?
+                Como você deseja usar o{"\n"}freelex?
             </Text>
 
             <Text style={styles.subtitle}>

@@ -30,6 +30,7 @@ export const styles = StyleSheet.create({
         fontSize: 14,
         fontWeight: "500",
         color: "#374151",
+        fontFamily: "SF Pro Text",
     },
 
     categoryTextActive: {
@@ -73,6 +74,7 @@ export const styles = StyleSheet.create({
         fontSize: 12,
         fontWeight: "600",
         color: "#FFFFFF",
+        fontFamily: "SF Pro Text",
     },
 
     content: {
@@ -94,11 +96,13 @@ export const styles = StyleSheet.create({
         fontSize: 16,
         fontWeight: "600",
         color: "#111827",
+        fontFamily: "Century Gothic",
     },
 
     subtitle: {
         fontSize: 13,
         color: "#6B7280",
+        fontFamily: "SF Pro Text",
     },
 
     priceBox: {
@@ -109,16 +113,19 @@ export const styles = StyleSheet.create({
         fontSize: 16,
         fontWeight: "600",
         color: "#2563EB",
+        fontFamily: "Century Gothic",
     },
 
     total: {
         fontSize: 12,
         color: "#6B7280",
+        fontFamily: "SF Pro Text",
     },
 
     meta: {
         fontSize: 13,
         color: "#6B7280",
+        fontFamily: "SF Pro Text",
     },
 
     button: {
@@ -133,5 +140,6 @@ export const styles = StyleSheet.create({
         fontSize: 14,
         fontWeight: "600",
         color: "#FFFFFF",
+        fontFamily: "SF Pro Text",
     },
 });
