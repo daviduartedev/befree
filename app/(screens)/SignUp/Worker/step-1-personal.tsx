@@ -11,6 +11,32 @@ import {
 import styles from "../../../../styles/signUp.personal.styles";
 import { useSignUp } from "@/app/context/SignUpContext";
 
+/**
+ * Converte DD/MM/AAAA -> YYYY-MM-DD
+ */
+function formatBirthDate(value?: string) {
+  if (!value) return "";
+
+  const cleaned = value.replace(/\D/g, "");
+
+  if (cleaned.length !== 8) return value;
+
+  const day = cleaned.slice(0, 2);
+  const month = cleaned.slice(2, 4);
+  const year = cleaned.slice(4, 8);
+
+  return `${year}-${month}-${day}`;
+}
+
+function displayBirthDate(value?: string) {
+  if (!value) return "";
+
+  if (!value.includes("-")) return value;
+
+  const [year, month, day] = value.split("-");
+  return `${day}/${month}/${year}`;
+}
+
 export default function Step1Personal() {
   const router = useRouter();
   const { data, updateData } = useSignUp();
@@ -78,8 +104,11 @@ export default function Step1Personal() {
               placeholder="DD/MM/AAAA"
               placeholderTextColor="#9CA3AF"
               style={styles.input}
-              value={data.birthDate}
-              onChangeText={(text) => updateData({ birthDate: text })}
+              keyboardType="numeric"
+              value={displayBirthDate(data.birthDate)}
+              onChangeText={(text) =>
+                updateData({ birthDate: formatBirthDate(text) })
+              }
             />
           </View>
         </View>
@@ -99,11 +128,6 @@ export default function Step1Personal() {
           </View>
         </View>
 
-        {/* Email and Password fields are missing in UI but required by backend. Adding them here for now or assuming they come later? 
-            Wait, the backend NEEDS email/password. Step 1 doesn't have them in the original code.
-            Checking other steps... Step 5 is finish. 
-            I MUST add Email/Password inputs. I'll add them to Step 1 for simplicity.
-        */}
         <View style={styles.field}>
           <Text style={styles.label}>E-mail</Text>
           <View style={styles.inputContainer}>

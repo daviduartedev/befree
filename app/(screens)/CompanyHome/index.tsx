@@ -2,6 +2,7 @@ import { View, Text, Pressable, ScrollView } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { styles } from "../../../styles/company.styles";
 import AppHeader from "@/app/components/header";
+import { router, useNavigation } from "expo-router";
 
 export default function CompanyHome() {
     return (
@@ -119,7 +120,7 @@ export default function CompanyHome() {
                 </View>
             </ScrollView>
 
-            <Pressable style={styles.fab}>
+            <Pressable onPress={() => router.push("/(screens)/CreateShift/step-1.index copy")} style={styles.fab}>
                 <Ionicons name="add" size={26} color="#fff" />
             </Pressable>
         </View>
