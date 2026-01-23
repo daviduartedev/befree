@@ -15,8 +15,11 @@ import AppHeader from "../../components/header";
 import { categories } from "./mock";
 import api from "@/app/services/api";
 
+import { useUser } from "@/app/context/UserContext";
+
 export default function Home() {
     const router = useRouter();
+    const { user } = useUser();
     const [activeCategory, setActiveCategory] = useState("all");
     const [turns, setTurns] = useState<any[]>([]);
     const [loading, setLoading] = useState(true);
@@ -155,23 +158,29 @@ export default function Home() {
                 items={[
                     {
                         key: "explore",
-                        label: "Explorar",
+                        label: user?.role === "COMPANY" ? "Home" : "Explorar",
                         icon: (active) => (
                             <Ionicons
-                                name="search"
+                                name={user?.role === "COMPANY" ? "home-outline" : "search-outline"}
                                 size={20}
                                 color={active ? "#2563EB" : "#9CA3AF"}
                             />
                         ),
-                        onPress: () => { },
+                        onPress: () => {
+                            if (user?.role === "COMPANY") {
+                                router.push("/(screens)/CompanyHome");
+                            } else {
+                                router.push("/(screens)/Home");
+                            }
+                        },
 
                     },
                     {
                         key: "turns",
-                        label: "Meus Turnos",
+                        label: user?.role === "COMPANY" ? "Turnos" : "Meus Turnos",
                         icon: (active) => (
                             <Ionicons
-                                name="calendar-outline"
+                                name={user?.role === "COMPANY" ? "list-outline" : "calendar-outline"}
                                 size={20}
                                 color={active ? "#2563EB" : "#9CA3AF"}
                             />
@@ -201,7 +210,7 @@ export default function Home() {
                             />
                         ),
                         onPress: () => {
-                            router.push("/Profile");
+                            router.push("/(screens)/Profile");
                         },
                     },
                 ]}

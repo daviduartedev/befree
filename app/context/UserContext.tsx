@@ -8,6 +8,7 @@ type User = {
     skills?: string[];
     photoUrl?: string;
     createdAt?: string;
+    role: 'WORKER' | 'COMPANY';
     // Add other fields as needed
 };
 

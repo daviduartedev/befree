@@ -188,25 +188,29 @@ export default function Profile() {
                 items={[
                     {
                         key: "explore",
-                        label: "Explorar",
+                        label: user.role === "COMPANY" ? "Home" : "Explorar",
                         icon: (active) => (
                             <Ionicons
-                                name="search"
+                                name={user.role === "COMPANY" ? "home-outline" : "search-outline"}
                                 size={20}
                                 color={active ? "#2563EB" : "#9CA3AF"}
                             />
                         ),
                         onPress: () => {
-                            router.push("/(screens)/Home");
+                            if (user.role === "COMPANY") {
+                                router.push("/(screens)/CompanyHome");
+                            } else {
+                                router.push("/(screens)/Home");
+                            }
                         },
 
                     },
                     {
                         key: "turns",
-                        label: "Meus Turnos",
+                        label: user.role === "COMPANY" ? "Turnos" : "Meus Turnos",
                         icon: (active) => (
                             <Ionicons
-                                name="calendar-outline"
+                                name={user.role === "COMPANY" ? "list-outline" : "calendar-outline"}
                                 size={20}
                                 color={active ? "#2563EB" : "#9CA3AF"}
                             />
@@ -235,7 +239,9 @@ export default function Profile() {
                                 color={active ? "#2563EB" : "#9CA3AF"}
                             />
                         ),
-                        onPress: () => { },
+                        onPress: () => {
+                            router.push("/(screens)/Profile");
+                        },
                     },
                 ]}
             />

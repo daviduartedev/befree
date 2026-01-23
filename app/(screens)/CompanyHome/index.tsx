@@ -6,6 +6,7 @@ import { router, useNavigation } from "expo-router";
 import { useEffect, useState } from "react";
 import api from "@/app/services/api";
 import { useUser } from "@/app/context/UserContext";
+import AppFooter from "@/app/components/footer";
 
 export default function CompanyHome() {
     const { user } = useUser();
@@ -124,6 +125,64 @@ export default function CompanyHome() {
             <Pressable onPress={() => router.push("/(screens)/CreateShift/step-1.index copy")} style={styles.fab}>
                 <Ionicons name="add" size={26} color="#fff" />
             </Pressable>
+            <AppFooter
+                activeKey="explore"
+                items={[
+                    {
+                        key: "explore",
+                        label: "Home",
+                        icon: (active) => (
+                            <Ionicons
+                                name="home-outline"
+                                size={20}
+                                color={active ? "#2563EB" : "#9CA3AF"}
+                            />
+                        ),
+                        onPress: () => {
+                            router.push("/(screens)/CompanyHome");
+                        },
+
+                    },
+                    {
+                        key: "turns",
+                        label: "Turnos",
+                        icon: (active) => (
+                            <Ionicons
+                                name="list-outline"
+                                size={20}
+                                color={active ? "#2563EB" : "#9CA3AF"}
+                            />
+                        ),
+                        onPress: () => { },
+                    },
+                    {
+                        key: "alerts",
+                        label: "Alertas",
+                        icon: (active) => (
+                            <Ionicons
+                                name="notifications-outline"
+                                size={20}
+                                color={active ? "#2563EB" : "#9CA3AF"}
+                            />
+                        ),
+                        onPress: () => { },
+                    },
+                    {
+                        key: "profile",
+                        label: "Perfil",
+                        icon: (active) => (
+                            <Ionicons
+                                name="person-outline"
+                                size={20}
+                                color={active ? "#2563EB" : "#9CA3AF"}
+                            />
+                        ),
+                        onPress: () => {
+                            router.push("/(screens)/Profile");
+                        },
+                    },
+                ]}
+            />
         </View>
     );
 }
