@@ -15,8 +15,8 @@ export default function ComponentHome({
     <>
       <View>
         <Text style={styles.title}>
-          BE{"\n"}
-          <Text style={styles.titleHighlight}>FREE</Text>
+          FREE{"\n"}
+          <Text style={styles.titleHighlight}>LEX</Text>
         </Text>
 
         <Text style={styles.subtitle}>

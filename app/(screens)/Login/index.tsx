@@ -14,6 +14,7 @@ import styles from "../../../styles/login.styles";
 import api from "@/app/services/api";
 
 import { useUser } from "@/app/context/UserContext";
+import { saveToken } from "@/app/authStorage";
 
 export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
@@ -27,7 +28,9 @@ export default function Login() {
     try {
       setLoading(true);
       const response = await api.post('/auth/login', { email, password });
+      await saveToken(response.data.access_token);
       console.log("Login Success:", response.data);
+      console.log("Token:", response.data.access_token);
 
       setUser(response.data.user); // Save user to global context
 
@@ -44,7 +47,7 @@ export default function Login() {
     <>
       <Stack.Screen options={{ headerShown: false }} />
       <ScrollView contentContainerStyle={styles.container}>
-        <Text style={styles.htitle}>befree</Text>
+        <Text style={styles.htitle}>freelex</Text>
 
         <Text style={styles.title}>Bem-vindo de volta</Text>
         <Text style={styles.subtitle}>
