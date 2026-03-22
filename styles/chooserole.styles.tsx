@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "#F9FAFB",
+        backgroundColor: "#FFFFFF",
         paddingHorizontal: 20,
         paddingTop: 16,
     },
@@ -52,12 +52,12 @@ export const styles = StyleSheet.create({
         borderRadius: 16,
         padding: 16,
         borderWidth: 1,
-        borderColor: "#E5E7EB",
+        borderColor: "#f23030",
         position: "relative",
     },
 
     cardActive: {
-        borderColor: "#2563EB",
+        borderColor: "#f23030",
     },
 
     cardIcon: {
@@ -102,7 +102,7 @@ export const styles = StyleSheet.create({
     },
 
     primaryButton: {
-        backgroundColor: "#2563EB",
+        backgroundColor: "#f23030",
         height: 52,
         borderRadius: 14,
         alignItems: "center",

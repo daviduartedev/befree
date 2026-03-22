@@ -2,6 +2,8 @@ import { Ionicons } from "@expo/vector-icons";
 import { View, Text } from "react-native";
 import { styles } from "../../styles/requirementsCard.styles";
 
+import { useUser } from "../context/UserContext";
+
 type RequirementItemProps = {
     icon: keyof typeof Ionicons.glyphMap;
     title: string;
@@ -9,10 +11,11 @@ type RequirementItemProps = {
 };
 
 function RequirementItem({ icon, title, description }: RequirementItemProps) {
+    const { theme } = useUser();
     return (
         <View style={styles.item}>
-            <View style={styles.iconWrapper}>
-                <Ionicons name={icon} size={18} color="#2563EB" />
+            <View style={[styles.iconWrapper, { backgroundColor: theme.primary + "15" }]}>
+                <Ionicons name={icon} size={18} color={theme.primary} />
             </View>
 
             <View style={styles.textWrapper}>

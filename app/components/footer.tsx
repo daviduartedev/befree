@@ -13,10 +13,14 @@ type AppFooterProps = {
   activeKey: string;
 };
 
+import { useUser } from "../context/UserContext";
+
 export default function AppFooter({
   items,
   activeKey,
 }: AppFooterProps) {
+  const { theme } = useUser();
+
   return (
     <View style={styles.container}>
       {items.map((item) => {
@@ -32,7 +36,7 @@ export default function AppFooter({
             <Text
               style={[
                 styles.label,
-                active && styles.labelActive,
+                active && { color: theme.primary },
               ]}
             >
               {item.label}

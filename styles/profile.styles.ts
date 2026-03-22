@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "#F3F4F6",
+        backgroundColor: "#fff2eb",
     },
 
     header: {
@@ -38,14 +38,14 @@ export const styles = StyleSheet.create({
         height: 96,
         borderRadius: 48,
         borderWidth: 2,
-        borderColor: "#DBEAFE",
+        borderColor: "#f23030",
     },
 
     checkBadge: {
         position: "absolute",
         bottom: 0,
         right: 0,
-        backgroundColor: "#2563EB",
+        backgroundColor: "#f23030",
         width: 22,
         height: 22,
         borderRadius: 11,
@@ -128,7 +128,7 @@ export const styles = StyleSheet.create({
 
     ratingFill: {
         height: "100%",
-        backgroundColor: "#2563EB",
+        backgroundColor: "#f23030",
     },
 
     ratingPercent: {
@@ -159,7 +159,7 @@ export const styles = StyleSheet.create({
 
     link: {
         fontSize: 12,
-        color: "#2563EB",
+        color: "#f23030",
         fontFamily: "SF Pro Text",
     },
 
@@ -198,28 +198,28 @@ export const styles = StyleSheet.create({
     chartBar: {
         width: 18,
         height: 48,
-        backgroundColor: "#93C5FD",
+        backgroundColor: "#f23030",
         borderRadius: 6,
     },
 
     chartBarLight: {
         width: 18,
         height: 36,
-        backgroundColor: "#DBEAFE",
+        backgroundColor: "#fde0d0",
         borderRadius: 6,
     },
 
     chartBarActive: {
         width: 18,
         height: 64,
-        backgroundColor: "#2563EB",
+        backgroundColor: "#f23030",
         borderRadius: 6,
     },
 
     chartBarSmall: {
         width: 18,
         height: 18,
-        backgroundColor: "#DBEAFE",
+        backgroundColor: "#fde0d0",
         borderRadius: 6,
     },
 
@@ -248,7 +248,7 @@ export const styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: "center",
         gap: 6,
-        backgroundColor: "#EFF6FF",
+        backgroundColor: "#fde0d0",
         paddingHorizontal: 10,
         paddingVertical: 6,
         borderRadius: 999,
@@ -256,7 +256,7 @@ export const styles = StyleSheet.create({
 
     skillText: {
         fontSize: 12,
-        color: "#2563EB",
+        color: "#f23030",
         fontWeight: "500",
         fontFamily: "SF Pro Text",
     },

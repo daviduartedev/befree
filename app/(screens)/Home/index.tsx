@@ -19,7 +19,7 @@ import { useUser } from "@/app/context/UserContext";
 
 export default function Home() {
     const router = useRouter();
-    const { user } = useUser();
+    const { user, theme } = useUser();
     const [activeCategory, setActiveCategory] = useState("all");
     const [turns, setTurns] = useState<any[]>([]);
     const [loading, setLoading] = useState(true);
@@ -45,7 +45,7 @@ export default function Home() {
             : turns.filter((item) => item.category === activeCategory);
 
     return (
-        <View style={styles.container}>
+        <View style={[styles.container, { backgroundColor: theme.background }]}>
             <AppHeader
                 title="Explorar Turnos"
                 leftAction={{
@@ -75,13 +75,13 @@ export default function Home() {
                             onPress={() => setActiveCategory(item.id)}
                             style={[
                                 styles.category,
-                                active && styles.categoryActive,
+                                active && { backgroundColor: theme.primary, borderColor: theme.primary },
                             ]}
                         >
                             <Text
                                 style={[
                                     styles.categoryText,
-                                    active && styles.categoryTextActive,
+                                    active && { color: "#FFFFFF" },
                                 ]}
                             >
                                 {item.label}
@@ -102,7 +102,7 @@ export default function Home() {
                             <Text style={{ color: "#6b7280" }}>Nenhum turno encontrado.</Text>
                         </View>
                     ) : (
-                        <ActivityIndicator size="large" color="#2563EB" style={{ marginTop: 20 }} />
+                        <ActivityIndicator size="large" color={theme.primary} style={{ marginTop: 20 }} />
                     )
                 }
                 renderItem={({ item }) => (
@@ -112,7 +112,7 @@ export default function Home() {
                             style={styles.image}
                         />
 
-                        <View style={styles.badge}>
+                         <View style={[styles.badge, { backgroundColor: theme.primary }]}>
                             <Text style={styles.badgeText}>
                                 {item.category.toUpperCase()}
                             </Text>
@@ -122,17 +122,17 @@ export default function Home() {
                             <View style={styles.row}>
                                 <View style={styles.info}>
                                     <Text style={styles.title}>{item.title}</Text>
-                                    <Text style={styles.subtitle}>{item.place || "Empresa Local"}</Text>
+                                    <Text style={styles.subtitle}>{item.company?.name || "Empresa Parceira"}</Text>
                                 </View>
 
                                 <View style={styles.priceBox}>
-                                    <Text style={styles.price}>{`R$ ${item.value}/h`}</Text>
+                                    <Text style={[styles.price, { color: theme.primary }]}>{`R$ ${item.value}/h`}</Text>
                                     <Text style={styles.total}>{`TOTAL R$ ${item.value * 4}`}</Text>
                                 </View>
                             </View>
 
                             <Text style={styles.meta}>
-                                {item.location || "São Paulo, SP"} • {item.distance || "Para você"}
+                                {item.address || "Localização Indisponível"} • {item.distance || "Para você"}
                             </Text>
                             <Text style={styles.meta}>
                                 {new Date(item.date).toLocaleDateString('pt-BR')} • {item.startTime} - {item.endTime}
@@ -143,7 +143,7 @@ export default function Home() {
                                     pathname: "/(screens)/Details/[id]",
                                     params: { id: item.id },
                                 })}
-                                style={styles.button}>
+                                style={[styles.button, { backgroundColor: theme.primary }]}>
                                 <Text style={styles.buttonText}>
                                     Ver Detalhes do Turno
                                 </Text>
@@ -163,7 +163,7 @@ export default function Home() {
                             <Ionicons
                                 name={user?.role === "COMPANY" ? "home-outline" : "search-outline"}
                                 size={20}
-                                color={active ? "#2563EB" : "#9CA3AF"}
+                                color={active ? theme.primary : "#9CA3AF"}
                             />
                         ),
                         onPress: () => {
@@ -182,7 +182,7 @@ export default function Home() {
                             <Ionicons
                                 name={user?.role === "COMPANY" ? "list-outline" : "calendar-outline"}
                                 size={20}
-                                color={active ? "#2563EB" : "#9CA3AF"}
+                                color={active ? theme.primary : "#9CA3AF"}
                             />
                         ),
                         onPress: () => {
@@ -198,7 +198,7 @@ export default function Home() {
                             <Ionicons
                                 name="notifications-outline"
                                 size={20}
-                                color={active ? "#2563EB" : "#9CA3AF"}
+                                color={active ? theme.primary : "#9CA3AF"}
                             />
                         ),
                         onPress: () => { },
@@ -210,7 +210,7 @@ export default function Home() {
                             <Ionicons
                                 name="person-outline"
                                 size={20}
-                                color={active ? "#2563EB" : "#9CA3AF"}
+                                color={active ? theme.primary : "#9CA3AF"}
                             />
                         ),
                         onPress: () => {

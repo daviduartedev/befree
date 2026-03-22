@@ -5,7 +5,7 @@ export default StyleSheet.create({
     paddingHorizontal: 20,
     paddingTop: 24,
     paddingBottom: 40,
-    backgroundColor: "#F9FAFB",
+    backgroundColor: "#FFFFFF",
     flexGrow: 1,
   },
 
@@ -24,7 +24,7 @@ export default StyleSheet.create({
 
   stepPercent: {
     fontSize: 12,
-    color: "#2563EB",
+    color: "#f23030",
     fontWeight: "600",
     fontFamily: "SF Pro Text",
   },
@@ -39,7 +39,7 @@ export default StyleSheet.create({
   progressFill: {
     width: "80%",
     height: "100%",
-    backgroundColor: "#2563EB",
+    backgroundColor: "#f23030",
     borderRadius: 6,
   },
 
@@ -84,7 +84,7 @@ export default StyleSheet.create({
     height: 44,
     borderRadius: 8,
     borderWidth: 1,
-    borderColor: "#2563EB",
+    borderColor: "#f23030",
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
@@ -92,7 +92,7 @@ export default StyleSheet.create({
   },
 
   uploadText: {
-    color: "#2563EB",
+    color: "#f23030",
     fontSize: 14,
     fontWeight: "600",
     fontFamily: "SF Pro Text",
@@ -121,7 +121,7 @@ export default StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     gap: 8,
-    backgroundColor: "#2563EB",
+    backgroundColor: "#f23030",
     paddingHorizontal: 16,
     height: 40,
     borderRadius: 8,
@@ -137,7 +137,7 @@ export default StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     gap: 10,
-    backgroundColor: "#EFF6FF",
+    backgroundColor: "#fde0d0",
     borderRadius: 10,
     padding: 14,
     marginTop: 8,
@@ -146,7 +146,7 @@ export default StyleSheet.create({
 
   tipText: {
     fontSize: 13,
-    color: "#1E40AF",
+    color: "#bf2626",
     flex: 1,
     fontFamily: "SF Pro Text",
   },
@@ -154,7 +154,7 @@ export default StyleSheet.create({
   nextButton: {
     height: 48,
     borderRadius: 10,
-    backgroundColor: "#2563EB",
+    backgroundColor: "#f23030",
     alignItems: "center",
     justifyContent: "center",
     marginBottom: 16,

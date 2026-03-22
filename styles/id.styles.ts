@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "#F3F4F6",
+        backgroundColor: "#fff2eb",
     },
 
     imageCard: {
@@ -28,7 +28,7 @@ export const styles = StyleSheet.create({
 
     badge: {
         alignSelf: "flex-start",
-        backgroundColor: "#2563EB",
+        backgroundColor: "#f23030",
         paddingHorizontal: 10,
         paddingVertical: 4,
         borderRadius: 6,
@@ -87,7 +87,7 @@ export const styles = StyleSheet.create({
     infoValuePrimary: {
         fontSize: 18,
         fontWeight: "600",
-        color: "#2563EB",
+        color: "#f23030",
         marginTop: 4,
         fontFamily: "Century Gothic",
     },
@@ -141,7 +141,7 @@ export const styles = StyleSheet.create({
     },
 
     primaryButton: {
-        backgroundColor: "#2563EB",
+        backgroundColor: "#f23030",
         borderRadius: 10,
         paddingVertical: 14,
         alignItems: "center",

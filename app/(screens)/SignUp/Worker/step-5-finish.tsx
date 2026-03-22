@@ -68,22 +68,22 @@ export default function Step5Finish() {
 
         <View style={styles.summaryCard}>
           <View style={styles.summaryRow}>
-            <Ionicons name="person-outline" size={18} color="#2563EB" />
+            <Ionicons name="person-outline" size={18} color="#f23030" />
             <Text style={styles.summaryText}>Dados pessoais preenchidos ({data.name})</Text>
           </View>
 
           <View style={styles.summaryRow}>
-            <Ionicons name="location-outline" size={18} color="#2563EB" />
+            <Ionicons name="location-outline" size={18} color="#f23030" />
             <Text style={styles.summaryText}>Endereço confirmado</Text>
           </View>
 
           <View style={styles.summaryRow}>
-            <Ionicons name="briefcase-outline" size={18} color="#2563EB" />
+            <Ionicons name="briefcase-outline" size={18} color="#f23030" />
             <Text style={styles.summaryText}>Especialidades: {data.skills?.length || 0} selecionadas</Text>
           </View>
 
           <View style={styles.summaryRow}>
-            <Ionicons name="document-text-outline" size={18} color="#2563EB" />
+            <Ionicons name="document-text-outline" size={18} color="#f23030" />
             <Text style={styles.summaryText}>Documentos {data.documentUrl ? "enviados" : "pendentes"}</Text>
           </View>
         </View>

@@ -13,8 +13,10 @@ import AppHeader from "@/app/components/header";
 import { router } from "expo-router";
 import * as ImagePicker from 'expo-image-picker';
 import { Image } from "react-native";
+import { useUser } from "@/app/context/UserContext";
 
 export default function CreateShift() {
+    const { theme } = useUser();
     const [title, setTitle] = useState("");
     const [category, setCategory] = useState("garcom");
     const [date, setDate] = useState("05/12/2023");
@@ -38,7 +40,7 @@ export default function CreateShift() {
     };
 
     return (
-        <ScrollView style={styles.container}>
+        <ScrollView style={[styles.container, { backgroundColor: theme.background }]}>
             <AppHeader
                 leftAction={{
                     icon: <Ionicons name="arrow-back" size={20} color="#111827" />,
@@ -50,7 +52,7 @@ export default function CreateShift() {
             <Text style={styles.stepText}>Passo 1 de 2</Text>
 
             <View style={styles.progressBar}>
-                <View style={styles.progressFill} />
+                <View style={[styles.progressFill, { backgroundColor: theme.primary }]} />
             </View>
 
             <Text style={styles.progressPercent}>50%</Text>
@@ -65,7 +67,7 @@ export default function CreateShift() {
                         onChangeText={setTitle}
                         style={styles.input}
                     />
-                    <Ionicons name="briefcase-outline" size={18} color="#2563eb" />
+                    <Ionicons name="briefcase-outline" size={18} color={theme.primary} />
                 </View>
             </View>
 
@@ -76,7 +78,7 @@ export default function CreateShift() {
                 <View style={styles.calendarMock}>
                     <Text style={styles.calendarMonth}>Dezembro 2023</Text>
 
-                    <View style={styles.calendarDay}>
+                    <View style={[styles.calendarDay, { backgroundColor: theme.primary }]}>
                         <Text style={styles.calendarDayText}>5</Text>
                     </View>
                 </View>
@@ -92,7 +94,7 @@ export default function CreateShift() {
                             onChangeText={setStartTime}
                             style={styles.input}
                         />
-                        <Ionicons name="time-outline" size={18} color="#2563eb" />
+                        <Ionicons name="time-outline" size={18} color={theme.primary} />
                     </View>
                 </View>
 
@@ -104,7 +106,7 @@ export default function CreateShift() {
                             onChangeText={setEndTime}
                             style={styles.input}
                         />
-                        <Ionicons name="time-outline" size={18} color="#2563eb" />
+                        <Ionicons name="time-outline" size={18} color={theme.primary} />
                     </View>
                 </View>
             </View>
@@ -132,7 +134,7 @@ export default function CreateShift() {
                         <Image source={{ uri: image }} style={{ width: '100%', height: '100%', borderRadius: 8 }} />
                     ) : (
                         <>
-                            <Ionicons name="image-outline" size={32} color="#2563eb" />
+                            <Ionicons name="image-outline" size={32} color={theme.primary} />
                             <Text style={{ color: '#64748b', marginTop: 8 }}>Toque para selecionar uma imagem</Text>
                         </>
                     )}
@@ -167,7 +169,7 @@ export default function CreateShift() {
                         image: image || ""
                     }
                 })}
-                style={styles.button}>
+                style={[styles.button, { backgroundColor: theme.primary }]}>
                 <Text style={styles.buttonText}>Próximo →</Text>
             </TouchableOpacity>
         </ScrollView>

@@ -4,7 +4,7 @@ export const styles = StyleSheet.create({
     container: {
         flex: 1,
         padding: 24,
-        backgroundColor: "#F9FAFB",
+        backgroundColor: "#FFFFFF",
     },
 
     title: {
@@ -37,14 +37,14 @@ export const styles = StyleSheet.create({
     primaryButton: {
         height: 52,
         borderRadius: 12,
-        backgroundColor: "#2563EB",
+        backgroundColor: "#f23030",
         justifyContent: "center",
         alignItems: "center",
         marginTop: 12,
     },
 
     primaryButtonDisabled: {
-        backgroundColor: "#93C5FD",
+        backgroundColor: "#fde0d0",
     },
 
     primaryButtonText: {

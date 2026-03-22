@@ -2,19 +2,21 @@ import { Ionicons } from "@expo/vector-icons";
 import { Image, Pressable, Text, View } from "react-native";
 import { useRouter } from "expo-router";
 import styles from "../../../styles/applicationSuccess.styles";
+import { useUser } from "../../context/UserContext";
 
 export default function ApplicationSuccess() {
     const router = useRouter();
+    const { theme } = useUser();
 
     return (
-        <View style={styles.container}>
+        <View style={[styles.container, { backgroundColor: theme.background }]}>
             <Pressable style={styles.close} onPress={() => router.back()}>
                 <Ionicons name="close" size={22} color="#111827" />
             </Pressable>
 
             <View style={styles.circleWrapper}>
                 <View style={styles.dashedCircle} />
-                <View style={styles.mainCircle}>
+                <View style={[styles.mainCircle, { backgroundColor: theme.primary }]}>
                     <Ionicons name="checkmark" size={28} color="#FFFFFF" />
                 </View>
             </View>
@@ -29,7 +31,7 @@ export default function ApplicationSuccess() {
 
             <View style={styles.card}>
                 <View style={styles.cardInfo}>
-                    <Text style={styles.cardLabel}>RESUMO DO TURNO</Text>
+                    <Text style={[styles.cardLabel, { color: theme.primary }]}>RESUMO DO TURNO</Text>
                     <Text style={styles.cardTitle}>Supermercado Silva</Text>
 
                     <View style={styles.cardRow}>
@@ -52,7 +54,7 @@ export default function ApplicationSuccess() {
             </View>
 
             <Pressable
-                style={styles.primaryButton}
+                style={[styles.primaryButton, { backgroundColor: theme.primary }]}
                 onPress={() => router.push("/(screens)/Worker/MyApplications")}
             >
                 <Text style={styles.primaryButtonText}>Ver Minha Agenda</Text>
@@ -62,7 +64,7 @@ export default function ApplicationSuccess() {
                 style={styles.secondaryButton}
                 onPress={() => router.push("/(screens)/Home")}
             >
-                <Text style={styles.secondaryButtonText}>Voltar para a Busca</Text>
+                <Text style={[styles.secondaryButtonText, { color: theme.primary }]}>Voltar para a Busca</Text>
             </Pressable>
         </View>
     );

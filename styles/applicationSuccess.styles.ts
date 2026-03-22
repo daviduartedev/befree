@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 export default StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "#FFFFFF",
+        backgroundColor: "#fff2eb",
         paddingHorizontal: 24,
         paddingTop: 24,
         alignItems: "center",
@@ -30,17 +30,17 @@ export default StyleSheet.create({
         borderRadius: 80,
         borderWidth: 2,
         borderStyle: "dashed",
-        borderColor: "#C7D2FE",
+        borderColor: "#fde0d0",
     },
 
     mainCircle: {
         width: 96,
         height: 96,
         borderRadius: 48,
-        backgroundColor: "#2563EB",
+        backgroundColor: "#f23030",
         alignItems: "center",
         justifyContent: "center",
-        shadowColor: "#2563EB",
+        shadowColor: "#f23030",
         shadowOffset: { width: 0, height: 8 },
         shadowOpacity: 0.3,
         shadowRadius: 16,
@@ -85,7 +85,7 @@ export default StyleSheet.create({
     cardLabel: {
         fontSize: 11,
         fontWeight: "700",
-        color: "#2563EB",
+        color: "#f23030",
         marginBottom: 4,
         fontFamily: "SF Pro Text",
     },
@@ -120,7 +120,7 @@ export default StyleSheet.create({
     primaryButton: {
         width: "100%",
         height: 48,
-        backgroundColor: "#2563EB",
+        backgroundColor: "#f23030",
         borderRadius: 10,
         alignItems: "center",
         justifyContent: "center",
@@ -139,13 +139,13 @@ export default StyleSheet.create({
         height: 48,
         borderRadius: 10,
         borderWidth: 1,
-        borderColor: "#2563EB",
+        borderColor: "#f23030",
         alignItems: "center",
         justifyContent: "center",
     },
 
     secondaryButtonText: {
-        color: "#2563EB",
+        color: "#f23030",
         fontSize: 16,
         fontWeight: "600",
         fontFamily: "SF Pro Text",

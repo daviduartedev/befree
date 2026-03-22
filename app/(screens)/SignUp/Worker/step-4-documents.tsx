@@ -60,19 +60,19 @@ export default function Step4Documents() {
 
         <View style={styles.card}>
           <View style={styles.cardHeader}>
-            <Ionicons name="document-text-outline" size={20} color="#2563EB" />
+            <Ionicons name="document-text-outline" size={20} color="#f23030" />
             <Text style={styles.cardTitle}>Upload de RG / CNH</Text>
           </View>
 
           <Pressable style={styles.uploadButton} onPress={() => handleUpload('doc')}>
-            <Ionicons name={data.documentUrl ? "checkmark-circle" : "cloud-upload-outline"} size={18} color="#2563EB" />
+            <Ionicons name={data.documentUrl ? "checkmark-circle" : "cloud-upload-outline"} size={18} color="#f23030" />
             <Text style={styles.uploadText}>{data.documentUrl ? "Documento Enviado" : "Selecionar arquivo"}</Text>
           </Pressable>
         </View>
 
         <View style={styles.card}>
           <View style={styles.cardHeader}>
-            <Ionicons name="camera-outline" size={20} color="#2563EB" />
+            <Ionicons name="camera-outline" size={20} color="#f23030" />
             <Text style={styles.cardTitle}>Foto de Perfil</Text>
           </View>
 
@@ -92,7 +92,7 @@ export default function Step4Documents() {
         </View>
 
         <View style={styles.tipBox}>
-          <Ionicons name="bulb-outline" size={18} color="#2563EB" />
+          <Ionicons name="bulb-outline" size={18} color="#f23030" />
           <Text style={styles.tipText}>
             Fotos nítidas aumentam suas chances de aprovação.
           </Text>

@@ -36,12 +36,13 @@ export const styles = StyleSheet.create({
   badgeText: {
     fontSize: 12,
     fontWeight: "700",
-    color: "#0284C7",
+    color: "#f23030",
     fontFamily: "SF Pro Text",
   },
 
   content: {
     padding: 16,
+    backgroundColor: "#FFFFFF",
   },
 
   header: {
@@ -76,7 +77,7 @@ export const styles = StyleSheet.create({
   price: {
     fontSize: 16,
     fontWeight: "700",
-    color: "#0284C7",
+    color: "#f23030",
     fontFamily: "Century Gothic",
   },
 
@@ -98,14 +99,14 @@ export const styles = StyleSheet.create({
 
   button: {
     marginTop: 12,
-    backgroundColor: "#1D9BF0",
+    backgroundColor: "#f23030",
     paddingVertical: 12,
     borderRadius: 10,
     alignItems: "center",
   },
 
   buttonPressed: {
-    backgroundColor: "#0284C7",
+    backgroundColor: "#f23030",
   },
 
   buttonText: {

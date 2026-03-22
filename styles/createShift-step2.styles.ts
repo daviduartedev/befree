@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "#F9FAFB",
+        backgroundColor: "#fff2eb",
         padding: 16,
     },
 
@@ -35,7 +35,7 @@ export const styles = StyleSheet.create({
     progressFill: {
         width: "100%",
         height: 6,
-        backgroundColor: "#2563eb",
+        backgroundColor: "#f23030",
         borderRadius: 6,
     },
 
@@ -83,8 +83,8 @@ export const styles = StyleSheet.create({
 
     requirementActive: {
         borderWidth: 1,
-        borderColor: "#2563eb",
-        backgroundColor: "#eff6ff",
+        borderColor: "#f23030",
+        backgroundColor: "#fde0d0",
     },
 
     requirementText: {
@@ -97,7 +97,7 @@ export const styles = StyleSheet.create({
     recurringBox: {
         flexDirection: "row",
         alignItems: "center",
-        backgroundColor: "#eff6ff",
+        backgroundColor: "#fde0d0",
         borderRadius: 14,
         padding: 14,
         marginTop: 24,
@@ -116,7 +116,7 @@ export const styles = StyleSheet.create({
 
     button: {
         marginTop: 32,
-        backgroundColor: "#2563eb",
+        backgroundColor: "#f23030",
         borderRadius: 14,
         height: 52,
         alignItems: "center",

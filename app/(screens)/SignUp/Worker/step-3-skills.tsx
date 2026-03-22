@@ -47,7 +47,7 @@ export default function Step3Skills() {
       <AppHeader
         title="Cadastro Profissional"
         leftAction={{
-          icon: <Ionicons name="arrow-back" size={20} color="#111827" />,
+          icon: <Ionicons name="arrow-back" size={20} color="#f23030" />,
           onPress: () => router.back(),
         }}
       />

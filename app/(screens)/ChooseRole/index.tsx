@@ -45,7 +45,7 @@ export default function ChooseRole() {
                     onPress={() => setRole("WORKER")}
                 >
                     <View style={styles.cardIconActive}>
-                        <Ionicons name="person" size={22} color="#2563EB" />
+                        <Ionicons name="person" size={22} color="#f23030" />
                     </View>
 
                     <Text style={styles.cardTitle}>Sou Profissional</Text>
@@ -57,7 +57,7 @@ export default function ChooseRole() {
                         <Ionicons
                             name="checkmark-circle"
                             size={18}
-                            color="#2563EB"
+                            color="#f23030"
                             style={styles.checkIcon}
                         />
                     )}

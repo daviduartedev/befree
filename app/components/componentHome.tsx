@@ -12,18 +12,17 @@ export default function ComponentHome({
   const router = useRouter();
 
   return (
-    <>
-      <View >
+    <View style={styles.container}>
+      <View style={styles.textContainer}>
         <Text style={styles.Title}>
-          Sua liberdade,{"\n"}
-          <Text style={styles.titleHighlight}>seu turno</Text>
+          O freelance que{"\n"}move a gastronomia.
         </Text>
         <Text style={styles.subtitle}>
           Conectando profissionais qualificados a empresas que precisam de talento agora.
         </Text>
       </View>
 
-      <View style={styles.sectionSpacing}>
+      <View style={styles.buttonsContainer}>
         <Pressable
           onPress={() => router.push("/(screens)/ChooseRole")}
           style={({ pressed }) => [
@@ -36,9 +35,7 @@ export default function ComponentHome({
             Cadastre-se
           </Text>
         </Pressable>
-      </View>
 
-      <View style={styles.sectionSpacing}>
         <Pressable
           onPress={() => router.push("/(screens)/Login")}
           style={({ pressed }) => [
@@ -52,6 +49,6 @@ export default function ComponentHome({
           </Text>
         </Pressable>
       </View>
-    </>
+    </View>
   );
 }

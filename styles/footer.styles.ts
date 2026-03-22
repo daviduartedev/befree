@@ -4,7 +4,7 @@ export const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
     height: 64,
-    backgroundColor: "#FFFFFF",
+    backgroundColor: "#fff2eb",
     borderTopWidth: 1,
     borderTopColor: "#E5E7EB",
   },
@@ -24,6 +24,6 @@ export const styles = StyleSheet.create({
   },
 
   labelActive: {
-    color: "#2563EB",
+    color: "#f23030",
   },
 });

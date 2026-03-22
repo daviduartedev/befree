@@ -3,14 +3,35 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "#F9FAFB",
+        backgroundColor: "#000", // Fallback
+    },
+
+    backgroundImage: {
+        flex: 1,
+        width: "100%",
+        height: "100%",
+    },
+
+    whiteContainer: {
+        backgroundColor: "#fff",
+        borderBottomLeftRadius: 36,
+        borderBottomRightRadius: 36,
         paddingHorizontal: 20,
+        paddingBottom: 40,
+        paddingTop: 60, // Safe area
+    },
+
+    headerTitle: {
+        textAlign: "center",
+        fontSize: 18,
+        fontWeight: "800",
+        color: "#111827",
+        marginBottom: 24,
     },
 
     cardsRow: {
         flexDirection: "row",
         gap: 12,
-        marginTop: 12,
         marginBottom: 20,
     },
 
@@ -18,8 +39,10 @@ export const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: "#fff",
         padding: 16,
-        borderRadius: 18,
-        elevation: 2,
+        borderRadius: 20,
+        borderWidth: 1,
+        borderColor: "#f3f4f6", // Light border to make it pop like the mockup
+        elevation: 0, // Mockup has very subtle or no shadow
     },
 
     cardTop: {
@@ -29,10 +52,10 @@ export const styles = StyleSheet.create({
     },
 
     cardIcon: {
-        width: 34,
-        height: 34,
+        width: 36,
+        height: 36,
         borderRadius: 10,
-        backgroundColor: "#EEF2FF",
+        backgroundColor: "#eef2ff",
         justifyContent: "center",
         alignItems: "center",
     },
@@ -51,39 +74,42 @@ export const styles = StyleSheet.create({
     },
 
     badgeGreen: {
-        backgroundColor: "#ECFDF5",
+        backgroundColor: "#dcfce7",
         paddingHorizontal: 8,
-        paddingVertical: 2,
+        paddingVertical: 4,
         borderRadius: 999,
     },
 
     badgeTextGreen: {
         fontSize: 11,
-        color: "#10B981",
-        fontWeight: "600",
+        color: "#10b981",
+        fontWeight: "700",
     },
 
     nextShift: {
         backgroundColor: "#fff",
-        borderRadius: 18,
-        padding: 16,
+        borderRadius: 20,
+        padding: 18,
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
-        marginBottom: 20,
+        marginBottom: 24,
+        borderWidth: 1,
+        borderColor: "#f3f4f6",
     },
 
     nextShiftLabel: {
         fontSize: 11,
-        color: "#6B7280",
-        fontWeight: "600",
-        marginBottom: 2,
+        color: "#9ca3af",
+        fontWeight: "700",
+        marginBottom: 4,
+        textTransform: "uppercase",
     },
 
     nextShiftTitle: {
-        fontSize: 16,
-        fontWeight: "700",
-        color: "#111827",
+        fontSize: 17,
+        fontWeight: "800",
+        color: "#1f2937",
     },
 
     nextShiftRight: {
@@ -91,15 +117,16 @@ export const styles = StyleSheet.create({
     },
 
     nextShiftNumber: {
-        fontSize: 22,
-        fontWeight: "700",
+        fontSize: 24,
+        fontWeight: "800",
         color: "#111827",
     },
 
     nextShiftVariation: {
         fontSize: 11,
-        color: "#EF4444",
-        marginTop: 2,
+        color: "#ef4444",
+        fontWeight: "600",
+        marginTop: 4,
     },
 
     sectionHeader: {
@@ -110,15 +137,15 @@ export const styles = StyleSheet.create({
     },
 
     sectionTitle: {
-        fontSize: 15,
-        fontWeight: "700",
+        fontSize: 16,
+        fontWeight: "800",
         color: "#111827",
     },
 
     sectionLink: {
-        fontSize: 13,
-        color: "#2563EB",
-        fontWeight: "600",
+        fontSize: 14,
+        color: "#3b82f6",
+        fontWeight: "700",
     },
 
     listCard: {
@@ -161,16 +188,16 @@ export const styles = StyleSheet.create({
         marginTop: 2,
     },
 
-    statusBlue: {
-        backgroundColor: "#EEF2FF",
+    statusRed: {
+        backgroundColor: "#fde0d0",
         paddingHorizontal: 8,
         paddingVertical: 2,
         borderRadius: 999,
     },
 
-    statusTextBlue: {
+    statusTextRed: {
         fontSize: 10,
-        color: "#2563EB",
+        color: "#f23030",
         fontWeight: "700",
     },
 
@@ -188,7 +215,7 @@ export const styles = StyleSheet.create({
     },
 
     statusGreen: {
-        backgroundColor: "#ECFDF5",
+        backgroundColor: "#fde0d0",
         paddingHorizontal: 8,
         paddingVertical: 2,
         borderRadius: 999,
@@ -204,12 +231,27 @@ export const styles = StyleSheet.create({
         position: "absolute",
         bottom: 28,
         right: 20,
-        backgroundColor: "#2563EB",
+        backgroundColor: "#f23030",
         width: 56,
         height: 56,
         borderRadius: 28,
         justifyContent: "center",
         alignItems: "center",
         elevation: 4,
+    },
+
+    logoContainer: {
+        position: 'absolute',
+        bottom: 80,
+        left: 0,
+        right: 0,
+        alignItems: 'center',
+        justifyContent: 'center',
+        pointerEvents: 'none',
+    },
+
+    logoImage: {
+        width: 140,
+        height: 60,
     },
 });

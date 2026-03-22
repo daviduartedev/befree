@@ -39,7 +39,7 @@ export const styles = StyleSheet.create({
         width: 32,
         height: 32,
         borderRadius: 8,
-        backgroundColor: "#EFF6FF",
+        backgroundColor: "#fde0d0",
         alignItems: "center",
         justifyContent: "center",
     },
@@ -57,7 +57,7 @@ export const styles = StyleSheet.create({
 
     itemDescription: {
         fontSize: 12,
-        color: "#6B7280",
+        color: "#f23030",
         marginTop: 2,
         lineHeight: 16,
         fontFamily: "SF Pro Text",

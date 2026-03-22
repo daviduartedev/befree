@@ -16,7 +16,7 @@ export const styles = StyleSheet.create({
     },
 
     sheet: {
-        backgroundColor: "#FFF",
+        backgroundColor: "#FFFFFF",
         borderTopLeftRadius: 20,
         borderTopRightRadius: 20,
         paddingHorizontal: 20,
@@ -78,7 +78,7 @@ export const styles = StyleSheet.create({
     },
 
     primaryButton: {
-        backgroundColor: "#2563EB",
+        backgroundColor: "#f23030",
         borderRadius: 12,
         paddingVertical: 14,
         alignItems: "center",

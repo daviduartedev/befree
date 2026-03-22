@@ -31,7 +31,7 @@ export const styles = StyleSheet.create({
   },
 
   iconOrange: {
-    backgroundColor: '#FFF3E0',
+    backgroundColor: '#f23030',
   },
 
   textContainer: {

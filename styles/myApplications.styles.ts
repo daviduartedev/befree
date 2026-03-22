@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "#FFFFFF",
+        backgroundColor: "#fff2eb",
     },
     list: {
         padding: 20,
@@ -50,7 +50,7 @@ export const styles = StyleSheet.create({
         fontWeight: "600",
     },
     status_PENDING: {
-        backgroundColor: "#FEF3C7",
+        backgroundColor: "#f23030",
         color: "#92400E",
     },
     status_APPROVED: {
@@ -72,7 +72,7 @@ export const styles = StyleSheet.create({
     value: {
         fontSize: 14,
         fontWeight: "700",
-        color: "#2563EB",
+        color: "#f23030",
         marginTop: 4,
     }
 });

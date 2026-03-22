@@ -5,9 +5,11 @@ import AppHeader from "../../components/header";
 import { Ionicons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
 import api from "../../services/api";
+import { useUser } from "@/app/context/UserContext";
 
 export default function MyApplications() {
     const router = useRouter();
+    const { theme } = useUser();
     const [applications, setApplications] = useState<any[]>([]);
     const [loading, setLoading] = useState(true);
 
@@ -43,7 +45,7 @@ export default function MyApplications() {
     };
 
     return (
-        <View style={styles.container}>
+        <View style={[styles.container, { backgroundColor: theme.background }]}>
             <AppHeader
                 title="Minhas Candidaturas"
                 leftAction={{
@@ -54,7 +56,7 @@ export default function MyApplications() {
 
             {loading ? (
                 <View style={{ flex: 1, justifyContent: "center" }}>
-                    <ActivityIndicator size="large" color="#2563EB" />
+                    <ActivityIndicator size="large" color={theme.primary} />
                 </View>
             ) : (
                 <FlatList
@@ -81,6 +83,12 @@ export default function MyApplications() {
                             <View style={styles.content}>
                                 <Text style={styles.title}>{item.shift.title}</Text>
                                 <Text style={styles.company}>{item.shift.company?.name || "Empresa"}</Text>
+                                <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 2 }}>
+                                    <Ionicons name="location-outline" size={12} color="#6B7280" />
+                                    <Text style={{ fontSize: 12, color: '#6B7280', marginLeft: 2 }}>
+                                        {item.shift.address || "Localização"}
+                                    </Text>
+                                </View>
 
                                 <View style={[styles.statusBadge, getStatusStyle(item.status)]}>
                                     <Text style={[styles.statusText, { color: getStatusStyle(item.status).color }]}>
@@ -92,7 +100,7 @@ export default function MyApplications() {
                                 <Text style={styles.date}>
                                     {new Date(item.shift.date).toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit' })}
                                 </Text>
-                                <Text style={styles.value}>R$ {item.shift.value}</Text>
+                                <Text style={[styles.value, { color: theme.primary }]}>R$ {item.shift.value}</Text>
                             </View>
                         </TouchableOpacity>
                     )}

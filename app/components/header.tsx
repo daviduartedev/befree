@@ -13,13 +13,17 @@ type AppHeaderProps = {
     rightActions?: HeaderAction[];
 };
 
+import { useUser } from "../context/UserContext";
+
 export default function AppHeader({
     title,
     leftAction,
     rightActions,
 }: AppHeaderProps) {
+    const { theme } = useUser();
+    
     return (
-        <View style={styles.container}>
+        <View style={[styles.container, { backgroundColor: theme.background }]}>
             <StatusBar hidden />
             <View style={styles.side}>
                 {leftAction && (

@@ -20,8 +20,11 @@ const getCheckIcon = (checked: boolean, required: boolean) => {
     return checked ? "checkbox" : "square-outline";
 };
 
+import { useUser } from "../context/UserContext";
+
 export default function ConfirmApplication({ onCancel, onConfirm }: Props) {
     const router = useRouter();
+    const { theme } = useUser();
 
     const [hasAvailability, setHasAvailability] = useState(false);
     const [hasUniform, setHasUniform] = useState(false);
@@ -61,7 +64,7 @@ export default function ConfirmApplication({ onCancel, onConfirm }: Props) {
                         <Ionicons
                             name={getCheckIcon(hasAvailability, true)}
                             size={18}
-                            color={hasAvailability ? "#2563EB" : "#9CA3AF"}
+                            color={hasAvailability ? theme.primary : "#9CA3AF"}
                         />
 
                         <View style={styles.checkTextWrapper}>
@@ -82,7 +85,7 @@ export default function ConfirmApplication({ onCancel, onConfirm }: Props) {
                         <Ionicons
                             name={getCheckIcon(hasUniform, true)}
                             size={18}
-                            color={hasUniform ? "#2563EB" : "#9CA3AF"}
+                            color={hasUniform ? theme.primary : "#9CA3AF"}
                         />
 
                         <View style={styles.checkTextWrapper}>
@@ -103,7 +106,7 @@ export default function ConfirmApplication({ onCancel, onConfirm }: Props) {
                         <Ionicons
                             name={getCheckIcon(acceptsValue, false)}
                             size={18}
-                            color={acceptsValue ? "#2563EB" : "#9CA3AF"}
+                            color={acceptsValue ? theme.primary : "#9CA3AF"}
                         />
 
                         <View style={styles.checkTextWrapper}>
@@ -121,6 +124,7 @@ export default function ConfirmApplication({ onCancel, onConfirm }: Props) {
                     style={[
                         styles.primaryButton,
                         !canConfirm && styles.primaryButtonDisabled,
+                        canConfirm && { backgroundColor: theme.primary }
                     ]}
                     disabled={!canConfirm}
                     onPress={handleConfirm}

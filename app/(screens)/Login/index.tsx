@@ -8,7 +8,8 @@ import {
   TextInput,
   View,
   Alert,
-  ActivityIndicator
+  ActivityIndicator,
+  Image
 } from "react-native";
 import styles from "../../../styles/login.styles";
 import api from "@/app/services/api";
@@ -29,10 +30,8 @@ export default function Login() {
       setLoading(true);
       const response = await api.post('/auth/login', { email, password });
       await saveToken(response.data.access_token);
-      console.log("Login Success:", response.data);
-      console.log("Token:", response.data.access_token);
 
-      setUser(response.data.user); // Save user to global context
+      setUser(response.data.user);
 
       const role = response.data.user.role;
 
@@ -50,72 +49,94 @@ export default function Login() {
   }
 
   return (
-    <>
+    <View style={styles.container}>
       <Stack.Screen options={{ headerShown: false }} />
-      <ScrollView contentContainerStyle={styles.container}>
-        <Text style={styles.htitle}>freelex</Text>
 
-        <Text style={styles.title}>Bem-vindo de volta</Text>
-        <Text style={styles.subtitle}>
-          Acesse sua conta para gerenciar turnos
-        </Text>
+      {/* Top Pattern */}
+      <View style={styles.topPatternContainer}>
+        <Image
+          source={require("../../../assets/images/bg2.jpg")}
+          style={styles.patternImage}
+          resizeMode="cover"
+        />
+      </View>
 
-        <View style={styles.field}>
-          <Text style={styles.label}>E-mail ou CPF</Text>
-          <View style={styles.inputContainer}>
-            <Ionicons name="mail-outline" size={18} color="#9CA3AF" />
-            <TextInput
-              placeholder="Digite seu e-mail ou CPF"
-              placeholderTextColor="#9CA3AF"
-              style={styles.input}
-              value={email}
-              onChangeText={setEmail}
-              autoCapitalize="none"
-            />
-          </View>
-        </View>
+      {/* Bottom Pattern */}
+      <View style={styles.bottomPatternContainer}>
+        <Image
+          source={require("../../../assets/images/bg2.jpg")}
+          style={styles.patternImage}
+          resizeMode="cover"
+        />
+      </View>
 
-        <View style={styles.field}>
-          <Text style={styles.label}>Senha</Text>
-          <View style={styles.inputContainer}>
-            <Ionicons name="lock-closed-outline" size={18} color="#9CA3AF" />
-            <TextInput
-              placeholder="Digite sua senha"
-              placeholderTextColor="#9CA3AF"
-              secureTextEntry={!showPassword}
-              style={styles.input}
-              value={password}
-              onChangeText={setPassword}
-            />
-            <Pressable onPress={() => setShowPassword(!showPassword)}>
-              <Ionicons
-                name={showPassword ? "eye-off-outline" : "eye-outline"}
-                size={18}
-                color="#9CA3AF"
-              />
-            </Pressable>
-          </View>
-        </View>
-
-        <Pressable>
-          <Text style={styles.forgot}>Esqueci minha senha</Text>
-        </Pressable>
-
-        <Pressable style={styles.button} onPress={handleLogin} disabled={loading}>
-          {loading ? (
-            <ActivityIndicator color="#FFF" />
-          ) : (
-            <Text style={styles.buttonText}>Entrar</Text>
-          )}
-        </Pressable>
-        <Pressable onPress={() => router.push("/(screens)/ChooseRole")}>
-          <Text style={styles.footer}>
-            Ainda não tem uma conta?{" "}
-            <Text style={styles.link}>Cadastre-se</Text>
+      <ScrollView
+        contentContainerStyle={styles.content}
+        showsVerticalScrollIndicator={false}
+      >
+        <View style={styles.formContainer}>
+          <Text style={styles.title}>Bem-vindo de volta</Text>
+          <Text style={styles.subtitle}>
+            Acesse sua conta para gerenciar turnos
           </Text>
-        </Pressable>
 
+          <View style={styles.field}>
+            <Text style={styles.label}>E-mail ou CPF</Text>
+            <View style={styles.inputContainer}>
+              <Ionicons name="mail-outline" size={20} color="#9CA3AF" style={styles.inputIcon} />
+              <TextInput
+                placeholder="Digite seu e-mail ou CPF"
+                placeholderTextColor="#9CA3AF"
+                style={styles.input}
+                value={email}
+                onChangeText={setEmail}
+                autoCapitalize="none"
+              />
+            </View>
+          </View>
+
+          <View style={styles.field}>
+            <Text style={styles.label}>Senha</Text>
+            <View style={styles.inputContainer}>
+              <Ionicons name="lock-closed-outline" size={20} color="#9CA3AF" style={styles.inputIcon} />
+              <TextInput
+                placeholder="Digite sua senha"
+                placeholderTextColor="#9CA3AF"
+                secureTextEntry={!showPassword}
+                style={styles.input}
+                value={password}
+                onChangeText={setPassword}
+              />
+              <Pressable onPress={() => setShowPassword(!showPassword)}>
+                <Ionicons
+                  name={showPassword ? "eye-off-outline" : "eye-outline"}
+                  size={20}
+                  color="#9CA3AF"
+                />
+              </Pressable>
+            </View>
+          </View>
+
+          <Pressable>
+            <Text style={styles.forgot}>Esqueci minha senha</Text>
+          </Pressable>
+
+          <Pressable style={styles.button} onPress={handleLogin} disabled={loading}>
+            {loading ? (
+              <ActivityIndicator color="#f23030" />
+            ) : (
+              <Text style={styles.buttonText}>Entrar</Text>
+            )}
+          </Pressable>
+
+          <Pressable onPress={() => router.push("/(screens)/ChooseRole")}>
+            <Text style={styles.footerText}>
+              Ainda não tem uma conta?{" "}
+              <Text style={styles.link}>Cadastre-se</Text>
+            </Text>
+          </Pressable>
+        </View>
       </ScrollView>
-    </>
+    </View>
   );
 }

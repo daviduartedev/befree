@@ -5,7 +5,7 @@ export default StyleSheet.create({
     paddingHorizontal: 20,
     paddingTop: 24,
     paddingBottom: 40,
-    backgroundColor: "#F9FAFB",
+    backgroundColor: "#FFFFFF",
     flexGrow: 1,
   },
 
@@ -24,7 +24,7 @@ export default StyleSheet.create({
 
   stepLink: {
     fontSize: 12,
-    color: "#2563EB",
+    color: "#f23030",
     fontWeight: "600",
     fontFamily: "SF Pro Text",
   },
@@ -39,7 +39,7 @@ export default StyleSheet.create({
   progressFill: {
     width: "60%",
     height: "100%",
-    backgroundColor: "#2563EB",
+    backgroundColor: "#f23030",
     borderRadius: 6,
   },
 
@@ -76,8 +76,8 @@ export default StyleSheet.create({
   },
 
   skillChipActive: {
-    backgroundColor: "#2563EB",
-    borderColor: "#2563EB",
+    backgroundColor: "#f23030",
+    borderColor: "#f23030",
   },
 
   skillText: {
@@ -103,13 +103,13 @@ export default StyleSheet.create({
     height: 48,
     borderRadius: 10,
     borderWidth: 1,
-    borderColor: "#2563EB",
+    borderColor: "#f23030",
     alignItems: "center",
     justifyContent: "center",
   },
 
   backText: {
-    color: "#2563EB",
+    color: "#f23030",
     fontSize: 14,
     fontWeight: "600",
     fontFamily: "SF Pro Text",
@@ -119,7 +119,7 @@ export default StyleSheet.create({
     flex: 1,
     height: 48,
     borderRadius: 10,
-    backgroundColor: "#2563EB",
+    backgroundColor: "#f23030",
     alignItems: "center",
     justifyContent: "center",
   },

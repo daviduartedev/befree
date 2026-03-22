@@ -5,7 +5,7 @@ export default StyleSheet.create({
     paddingHorizontal: 20,
     paddingTop: 24,
     paddingBottom: 40,
-    backgroundColor: "#F9FAFB",
+    backgroundColor: "#FFFFFF",
     flexGrow: 1,
   },
 
@@ -24,7 +24,7 @@ export default StyleSheet.create({
 
   percent: {
     fontSize: 12,
-    color: "#2563EB",
+    color: "#f23030",
     fontWeight: "600",
     fontFamily: "SF Pro Text",
   },
@@ -39,7 +39,7 @@ export default StyleSheet.create({
   progressFill: {
     width: "20%",
     height: "100%",
-    backgroundColor: "#2563EB",
+    backgroundColor: "#f23030",
     borderRadius: 6,
   },
 
@@ -93,7 +93,7 @@ export default StyleSheet.create({
     marginTop: 20,
     height: 48,
     borderRadius: 10,
-    backgroundColor: "#2563EB",
+    backgroundColor: "#f23030",
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",

@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "#FAF9F6",
+        backgroundColor: "#fff2eb",
     },
 
     categories: {
@@ -22,8 +22,8 @@ export const styles = StyleSheet.create({
     },
 
     categoryActive: {
-        backgroundColor: "#2563EB",
-        borderColor: "#2563EB",
+        backgroundColor: "#f23030",
+        borderColor: "#f23030",
     },
 
     categoryText: {
@@ -64,7 +64,7 @@ export const styles = StyleSheet.create({
         position: "absolute",
         top: 12,
         left: 12,
-        backgroundColor: "#2563EB",
+        backgroundColor: "#f23030",
         paddingHorizontal: 10,
         paddingVertical: 4,
         borderRadius: 12,
@@ -80,6 +80,7 @@ export const styles = StyleSheet.create({
     content: {
         padding: 16,
         gap: 8,
+        backgroundColor: "#FFFFFF",
     },
 
     row: {
@@ -112,7 +113,7 @@ export const styles = StyleSheet.create({
     price: {
         fontSize: 16,
         fontWeight: "600",
-        color: "#2563EB",
+        color: "#f23030",
         fontFamily: "Century Gothic",
     },
 
@@ -132,7 +133,7 @@ export const styles = StyleSheet.create({
         marginTop: 8,
         paddingVertical: 12,
         borderRadius: 12,
-        backgroundColor: "#2563EB",
+        backgroundColor: "#f23030",
         alignItems: "center",
     },
 

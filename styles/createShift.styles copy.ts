@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "#F9FAFB",
+        backgroundColor: "#fff2eb",
         padding: 16,
     },
 
@@ -35,7 +35,7 @@ export const styles = StyleSheet.create({
     progressFill: {
         width: "50%",
         height: 6,
-        backgroundColor: "#2563eb",
+        backgroundColor: "#f23030",
         borderRadius: 6,
     },
 
@@ -95,7 +95,7 @@ export const styles = StyleSheet.create({
         width: 36,
         height: 36,
         borderRadius: 18,
-        backgroundColor: "#2563eb",
+        backgroundColor: "#f23030",
         alignItems: "center",
         justifyContent: "center",
     },
@@ -125,7 +125,7 @@ export const styles = StyleSheet.create({
 
     button: {
         marginTop: 32,
-        backgroundColor: "#2563eb",
+        backgroundColor: "#f23030",
         borderRadius: 14,
         height: 52,
         alignItems: "center",
